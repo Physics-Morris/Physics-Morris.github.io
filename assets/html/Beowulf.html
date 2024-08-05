@@ -1,0 +1,2383 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List href="How_to_Build_a_Beowulf_Cluster.fld/filelist.xml">
+<link rel=Edit-Time-Data href="How_to_Build_a_Beowulf_Cluster.fld/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<link rel=themeData href="How_to_Build_a_Beowulf_Cluster.fld/themedata.thmx">
+<link rel=colorSchemeMapping
+href="How_to_Build_a_Beowulf_Cluster.fld/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DisplayBackgroundShape/>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>en-TW</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-TW</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser/>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="376">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hashtag"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Unresolved Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-134238209 -371195905 63 0 4129279 0;}
+@font-face
+	{font-family:"PT Sans Narrow";
+	panose-1:2 11 5 6 2 2 3 2 2 4;
+	mso-font-charset:77;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1342185547 0 0 151 0;}
+@font-face
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"Open Sans";
+	panose-1:2 11 6 6 3 5 4 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870161 1073750107 40 0 415 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-134238209 -371195905 63 0 4129279 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:120%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Open Sans",sans-serif;
+	mso-fareast-font-family:"Open Sans";
+	color:#695D46;
+	mso-ansi-language:EN;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:Normal;
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:130%;
+	mso-pagination:lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:18.0pt;
+	font-family:"PT Sans Narrow",sans-serif;
+	mso-fareast-font-family:"PT Sans Narrow";
+	mso-bidi-font-family:"PT Sans Narrow";
+	color:#FF5E0E;
+	mso-font-kerning:0pt;
+	mso-ansi-language:EN;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:16.0pt;
+	font-family:"PT Sans Narrow",sans-serif;
+	mso-fareast-font-family:"PT Sans Narrow";
+	mso-bidi-font-family:"PT Sans Narrow";
+	color:#008575;
+	mso-ansi-language:EN;
+	font-weight:normal;}
+h3
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	font-family:"PT Sans Narrow",sans-serif;
+	mso-fareast-font-family:"PT Sans Narrow";
+	mso-bidi-font-family:"PT Sans Narrow";
+	color:#695D46;
+	mso-ansi-language:EN;
+	font-weight:normal;}
+h4
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:120%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:11.0pt;
+	font-family:"Trebuchet MS",sans-serif;
+	mso-fareast-font-family:"Trebuchet MS";
+	mso-bidi-font-family:"Trebuchet MS";
+	color:#666666;
+	mso-ansi-language:EN;
+	font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+h5
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:120%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:11.0pt;
+	font-family:"Trebuchet MS",sans-serif;
+	mso-fareast-font-family:"Trebuchet MS";
+	mso-bidi-font-family:"Trebuchet MS";
+	color:#666666;
+	mso-ansi-language:EN;
+	font-weight:normal;}
+h6
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:120%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	font-family:"Trebuchet MS",sans-serif;
+	mso-fareast-font-family:"Trebuchet MS";
+	mso-bidi-font-family:"Trebuchet MS";
+	color:#666666;
+	mso-ansi-language:EN;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-priority:99;
+	mso-style-link:"Header Char";
+	margin:0cm;
+	mso-pagination:widow-orphan;
+	tab-stops:center 234.0pt right 468.0pt;
+	font-size:11.0pt;
+	font-family:"Open Sans",sans-serif;
+	mso-fareast-font-family:"Open Sans";
+	color:#695D46;
+	mso-ansi-language:EN;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-priority:99;
+	mso-style-link:"Footer Char";
+	margin:0cm;
+	mso-pagination:widow-orphan;
+	tab-stops:center 234.0pt right 468.0pt;
+	font-size:11.0pt;
+	font-family:"Open Sans",sans-serif;
+	mso-fareast-font-family:"Open Sans";
+	color:#695D46;
+	mso-ansi-language:EN;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:42.0pt;
+	font-family:"PT Sans Narrow",sans-serif;
+	mso-fareast-font-family:"PT Sans Narrow";
+	mso-bidi-font-family:"PT Sans Narrow";
+	color:#695D46;
+	mso-ansi-language:EN;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-priority:11;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	font-family:"PT Sans Narrow",sans-serif;
+	mso-fareast-font-family:"PT Sans Narrow";
+	mso-bidi-font-family:"PT Sans Narrow";
+	color:#695D46;
+	mso-ansi-language:EN;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Footer;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:11.0pt;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Open Sans",sans-serif;
+	mso-ascii-font-family:"Open Sans";
+	mso-fareast-font-family:"Open Sans";
+	mso-hansi-font-family:"Open Sans";
+	mso-bidi-font-family:"Open Sans";
+	color:#695D46;
+	mso-ansi-language:EN;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-top:6.0pt;
+	line-height:120%;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("How_to_Build_a_Beowulf_Cluster.fld/header.html") fs;
+	mso-footnote-continuation-separator:url("How_to_Build_a_Beowulf_Cluster.fld/header.html") fcs;
+	mso-endnote-separator:url("How_to_Build_a_Beowulf_Cluster.fld/header.html") es;
+	mso-endnote-continuation-separator:url("How_to_Build_a_Beowulf_Cluster.fld/header.html") ecs;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:54.0pt 72.0pt 54.0pt 72.0pt;
+	mso-header-margin:0cm;
+	mso-footer-margin:36.0pt;
+	mso-page-numbers:0;
+	mso-title-page:yes;
+	mso-even-header:url("How_to_Build_a_Beowulf_Cluster.fld/header.html") eh1;
+	mso-header:url("How_to_Build_a_Beowulf_Cluster.fld/header.html") h1;
+	mso-even-footer:url("How_to_Build_a_Beowulf_Cluster.fld/header.html") ef1;
+	mso-footer:url("How_to_Build_a_Beowulf_Cluster.fld/header.html") f1;
+	mso-first-header:url("How_to_Build_a_Beowulf_Cluster.fld/header.html") fh1;
+	mso-first-footer:url("How_to_Build_a_Beowulf_Cluster.fld/header.html") ff1;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:49348816;
+	mso-list-template-ids:-816253576;}
+@list l0:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l0:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l0:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:144.0pt;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l0:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:180.0pt;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l0:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l0:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:252.0pt;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l0:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:288.0pt;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l0:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:324.0pt;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l0:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:360.0pt;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l1
+	{mso-list-id:759564363;
+	mso-list-template-ids:-1167550620;}
+@list l1:level1
+	{mso-level-number-format:roman-upper;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l1:level2
+	{mso-level-number-format:alpha-upper;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l1:level3
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l1:level4
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%4\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l1:level5
+	{mso-level-text:"\(%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l1:level6
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l1:level7
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%7\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l1:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+@list l1:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%9\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-18.0pt;
+	text-decoration:none;
+	text-underline:none;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:6.0pt;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:0cm;
+	mso-para-margin-left:0cm;
+	line-height:120%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Open Sans",sans-serif;
+	color:#695D46;
+	mso-ansi-language:EN;}
+table.a
+	{mso-style-name:"";
+	mso-tstyle-rowband-size:1;
+	mso-tstyle-colband-size:1;
+	mso-style-unhide:no;
+	mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt;
+	mso-para-margin-top:6.0pt;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:0cm;
+	mso-para-margin-left:0cm;
+	line-height:120%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Open Sans",sans-serif;
+	color:#695D46;
+	mso-ansi-language:EN;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2052"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="2"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white lang=en-TW style='tab-interval:36.0pt;word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<h2 align=center style='margin-top:0cm;text-align:center;line-height:120%;
+border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;mso-border-shadow:yes'><a
+name="_z6ne0og04bp5"></a><span lang=EN style='font-size:12.0pt;line-height:
+120%;font-family:"Open Sans",sans-serif;mso-fareast-font-family:"Open Sans";
+color:windowtext;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="image3.png" o:spid="_x0000_i1047" type="#_x0000_t75"
+ alt="horizontal line" style='width:466pt;height:8pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="How_to_Build_a_Beowulf_Cluster.fld/image001.png" o:title="horizontal line"
+  cropbottom="-23058f"/>
+</v:shape><![endif]--><![if !vml]><img width=466 height=8
+src="How_to_Build_a_Beowulf_Cluster.fld/image002.jpg" alt="horizontal line"
+v:shapes="image3.png"><![endif]></span><span lang=EN style='font-size:12.0pt;
+line-height:120%;font-family:"Open Sans",sans-serif;mso-fareast-font-family:
+"Open Sans";color:windowtext'><o:p></o:p></span></h2>
+
+<p class=MsoNormal align=center style='text-align:center;border:none;
+mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;mso-border-shadow:yes'><span
+lang=EN style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="image5.jpg"
+ o:spid="_x0000_i1046" type="#_x0000_t75" alt="Placeholder image" style='width:466pt;
+ height:310pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="How_to_Build_a_Beowulf_Cluster.fld/image003.jpg" o:title="Placeholder image"
+  croptop="15668f" cropbottom="15668f"/>
+</v:shape><![endif]--><![if !vml]><img width=466 height=310
+src="How_to_Build_a_Beowulf_Cluster.fld/image004.jpg" alt="Placeholder image"
+v:shapes="image5.jpg"><![endif]></span></p>
+
+<p class=MsoTitle align=center style='text-align:center;border:none;mso-padding-alt:
+31.0pt 31.0pt 31.0pt 31.0pt;mso-border-shadow:yes'><a name="_2gazcsgmxkub"></a><span
+lang=EN>How to Build a Beowulf Cluster</span></p>
+
+<p class=MsoSubtitle align=center style='text-align:center;border:none;
+mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;mso-border-shadow:yes'><a
+name="_ng30guuqqp2v"></a><span lang=EN>09.08.2020</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:0cm;
+margin-bottom:72.0pt;margin-left:0cm;text-align:center;border:none;mso-padding-alt:
+31.0pt 31.0pt 31.0pt 31.0pt;mso-border-shadow:yes'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='font-size:18.0pt;line-height:120%;font-family:
+"Arial Unicode MS",sans-serif'>─</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:normal;
+border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;mso-border-shadow:yes'><span
+lang=EN style='font-size:16.0pt;font-family:"PT Sans Narrow",sans-serif;
+mso-fareast-font-family:"PT Sans Narrow";mso-bidi-font-family:"PT Sans Narrow";
+color:#008575'>YC Huang<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:normal;
+border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;mso-border-shadow:yes'><span
+lang=EN style='font-size:16.0pt;font-family:"PT Sans Narrow",sans-serif;
+mso-fareast-font-family:"PT Sans Narrow";mso-bidi-font-family:"PT Sans Narrow";
+color:#008575'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoSubtitle align=center style='margin-top:0cm;text-align:center'><a
+name="_ahkijdwpsimx"></a><span lang=EN>NCU Physics Department</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><span lang=EN style='font-size:14.0pt;line-height:120%;
+font-family:"PT Sans Narrow",sans-serif;mso-fareast-font-family:"PT Sans Narrow";
+mso-bidi-font-family:"PT Sans Narrow"'><o:p>&nbsp;</o:p></span></p>
+
+<h1 style='border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;mso-border-shadow:
+yes'><a name="_au51mny0sx6"></a><span lang=EN>Overview</span></h1>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:12.0pt;
+margin-left:0cm'><span lang=EN>A Beowulf cluster is a<a
+href="https://en.wikipedia.org/wiki/Computer_cluster"><span style='color:windowtext;
+text-decoration:none;text-underline:none'> </span></a><a
+href="https://en.wikipedia.org/wiki/Computer_cluster"><span style='color:windowtext;
+text-decoration:none;text-underline:none'>computer cluster</span></a> of what
+are normally identical, commodity-grade computers networked into a small<a
+href="https://en.wikipedia.org/wiki/Local_area_network"><span style='color:
+windowtext;text-decoration:none;text-underline:none'> </span></a><a
+href="https://en.wikipedia.org/wiki/Local_area_network"><span style='color:
+windowtext;text-decoration:none;text-underline:none'>local area network</span></a>
+with libraries and programs installed which allow processing to be shared among
+them. The result is a high-performance<a
+href="https://en.wikipedia.org/wiki/Parallel_computing"><span style='color:
+windowtext;text-decoration:none;text-underline:none'> </span></a><a
+href="https://en.wikipedia.org/wiki/Parallel_computing"><span style='color:
+windowtext;text-decoration:none;text-underline:none'>parallel computing</span></a>
+cluster from inexpensive<a
+href="https://en.wikipedia.org/wiki/Personal_computer"><span style='color:windowtext;
+text-decoration:none;text-underline:none'> </span></a><a
+href="https://en.wikipedia.org/wiki/Personal_computer"><span style='color:windowtext;
+text-decoration:none;text-underline:none'>personal computer</span></a>
+hardware.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:12.0pt;
+margin-left:0cm'><span lang=EN>The name Beowulf originally referred to a
+specific computer built in 1994 by<a
+href="https://en.wikipedia.org/wiki/Thomas_Sterling_(computing)"><span
+style='color:windowtext;text-decoration:none;text-underline:none'> </span></a><a
+href="https://en.wikipedia.org/wiki/Thomas_Sterling_(computing)"><span
+style='color:windowtext;text-decoration:none;text-underline:none'>Thomas
+Sterling</span></a> and<a href="https://en.wikipedia.org/wiki/Donald_Becker"><span
+style='color:windowtext;text-decoration:none;text-underline:none'> </span></a><a
+href="https://en.wikipedia.org/wiki/Donald_Becker"><span style='color:windowtext;
+text-decoration:none;text-underline:none'>Donald Becker</span></a> at<a
+href="https://en.wikipedia.org/wiki/NASA"><span style='color:windowtext;
+text-decoration:none;text-underline:none'> </span></a><a
+href="https://en.wikipedia.org/wiki/NASA"><span style='color:windowtext;
+text-decoration:none;text-underline:none'>NASA</span></a>. The name
+&quot;Beowulf&quot; comes from the<a
+href="https://en.wikipedia.org/wiki/Old_English"><span style='color:windowtext;
+text-decoration:none;text-underline:none'> </span></a><a
+href="https://en.wikipedia.org/wiki/Old_English"><span style='color:windowtext;
+text-decoration:none;text-underline:none'>Old English</span></a> epic<a
+href="https://en.wikipedia.org/wiki/Beowulf"><span style='color:windowtext;
+text-decoration:none;text-underline:none'> </span></a><a
+href="https://en.wikipedia.org/wiki/Beowulf"><span style='color:windowtext;
+text-decoration:none;text-underline:none'>poem of the same name</span></a>.</span></p>
+
+<p class=MsoNormal style='margin-left:396.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><span lang=EN>— Wikipedia</span></p>
+
+<h1 style='border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;mso-border-shadow:
+yes'><a name="_4p7xi5bvhxdr"></a><span lang=EN>Requirement</span></h1>
+
+<h2 style='margin-left:36.0pt;text-indent:-36.0pt;mso-text-indent-alt:-18.0pt;
+mso-list:l1 level1 lfo2'><a name="_6o9wqsay2qit"></a><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>I.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Hardware</span></h2>
+
+<h2 style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level2 lfo2'><a
+name="_ln2gsr886vol"></a><![if !supportLists]><span lang=EN><span
+style='mso-list:Ignore'>A.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Network (all node nust on the same
+network)</span></h2>
+
+<h2 style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level2 lfo2'><a
+name="_3mff8io5bfjs"></a><![if !supportLists]><span lang=EN><span
+style='mso-list:Ignore'>B.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>One master node</span></h2>
+
+<h2 style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level2 lfo2'><a
+name="_mkn2d0kn6e6t"></a><![if !supportLists]><span lang=EN><span
+style='mso-list:Ignore'>C.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Computer nodes</span></h2>
+
+<h2 style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level2 lfo2'><a
+name="_vjpyd3ffaaph"></a><![if !supportLists]><span lang=EN><span
+style='mso-list:Ignore'>D.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Gateway</span></h2>
+
+<h2 style='margin-left:36.0pt;text-indent:-36.0pt;mso-text-indent-alt:-18.0pt;
+mso-list:l1 level1 lfo2'><a name="_c4uymqltp8em"></a><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>II.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Software</span></h2>
+
+<h2 style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level2 lfo2'><a
+name="_ahmingu8i2yi"></a><![if !supportLists]><span lang=EN><span
+style='mso-list:Ignore'>A.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN><span
+style='mso-spacerun:yes'> </span>Linux OS (Ubuntu 20.04.1 LTS in this doc)</span></h2>
+
+<h2 style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level2 lfo2'><a
+name="_l60ddinwewo9"></a><![if !supportLists]><span lang=EN><span
+style='mso-list:Ignore'>B.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Network File System (NFS)</span></h2>
+
+<h2 style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level2 lfo2'><a
+name="_nr87bc62oqgr"></a><![if !supportLists]><span lang=EN><span
+style='mso-list:Ignore'>C.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Secure Shell (SSH)</span></h2>
+
+<h2 style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level2 lfo2'><a
+name="_bhl64npe59n7"></a><![if !supportLists]><span lang=EN><span
+style='mso-list:Ignore'>D.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Message Passing Interface (MPI)</span></h2>
+
+<h2 style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level2 lfo2'><a
+name="_l9xm8gt7oe3s"></a><![if !supportLists]><span lang=EN><span
+style='mso-list:Ignore'>E.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>MPICH</span></h2>
+
+<h1 style='border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;mso-border-shadow:
+yes'><a name="_yyrhu7ml5bea"></a><span lang=EN>Installation</span></h1>
+
+<h2 style='margin-left:36.0pt;text-indent:-36.0pt;mso-text-indent-alt:-18.0pt;
+mso-list:l1 level1 lfo2;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><a name="_buwz1tcz7y35"></a><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>III.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Linux OS</span></h2>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>In this doc we use
+Ubuntu Desktop Edition for the sack of user interface friendly.</span></p>
+
+<h2 style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level2 lfo2;
+border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;mso-border-shadow:yes'><a
+name="_qlsb8hbkiqw0"></a><![if !supportLists]><span lang=EN><span
+style='mso-list:Ignore'>A.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Create usb flash drive</span></h2>
+
+<h2 style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level2 lfo2;
+border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;mso-border-shadow:yes'><a
+name="_3na44fw52f0"></a><![if !supportLists]><span lang=EN><span
+style='mso-list:Ignore'>B.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Install ubuntu</span></h2>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN>enabling both
+Download updates and Install third-party software</span><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="image2.png" o:spid="_x0000_s2051" type="#_x0000_t75" style='position:absolute;
+  left:0;text-align:left;margin-left:93pt;margin-top:10.5pt;width:337.9pt;
+  height:204.95pt;z-index:251658240;visibility:visible;mso-wrap-style:square;
+  mso-wrap-distance-left:9pt;mso-wrap-distance-top:9pt;
+  mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:9pt;
+  mso-position-horizontal:absolute;mso-position-horizontal-relative:text;
+  mso-position-vertical:absolute;mso-position-vertical-relative:text'>
+  <v:imagedata src="How_to_Build_a_Beowulf_Cluster.fld/image005.png" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=83 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=338 height=205
+   src="How_to_Build_a_Beowulf_Cluster.fld/image006.jpg" v:shapes="image2.png"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<h2 style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level2 lfo2;
+border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;mso-border-shadow:yes'><a
+name="_9h8gvr15tr11"></a><![if !supportLists]><span lang=EN><span
+style='mso-list:Ignore'>C.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Complete</span></h2>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN><span
+style='mso-tab-count:2'>                        </span></span><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="image4.jpg" o:spid="_x0000_s2050" type="#_x0000_t75" style='position:absolute;
+  left:0;text-align:left;margin-left:93pt;margin-top:16.65pt;width:338.25pt;
+  height:87.6pt;z-index:251659264;visibility:visible;mso-wrap-style:square;
+  mso-wrap-distance-left:9pt;mso-wrap-distance-top:9pt;
+  mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:9pt;
+  mso-position-horizontal:absolute;mso-position-horizontal-relative:text;
+  mso-position-vertical:absolute;mso-position-vertical-relative:text'>
+  <v:imagedata src="How_to_Build_a_Beowulf_Cluster.fld/image007.jpg" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=83 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=338 height=88
+   src="How_to_Build_a_Beowulf_Cluster.fld/image007.jpg" v:shapes="image4.jpg"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>For detail
+installation guide check out the official doc of ubuntu
+(https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)</span></p>
+
+<h2 style='margin-left:36.0pt;text-indent:-36.0pt;mso-text-indent-alt:-18.0pt;
+mso-list:l1 level1 lfo2'><a name="_7dpc2jlqwgk"></a><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>IV.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Setting static local IP address on
+every node</span></h2>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Setting a static ip
+address on each node (eg. 192.168.0.5 and 192.168.0.6 etc)</span></p>
+
+<h2 style='margin-left:36.0pt;text-indent:-36.0pt;mso-text-indent-alt:-18.0pt;
+mso-list:l1 level1 lfo2'><a name="_roxfyc2xidme"></a><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>V.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Edit the host file on </span><span
+lang=EN style='color:red'>EVERY </span><span lang=EN>nodes</span></h2>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ sudo vi /etc/hosts</span></b><span
+lang=EN style='color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>And add the
+following line into the hosts file (depending on how many nodes you have).</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Also you can change
+vi to any editor you prefer, but vi is a wonderful and a pre-installed software
+on every linux computer.</span></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>127.0.0.1<span style='mso-tab-count:
+1'>        </span>localhost<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>192.168.1.3<span style='mso-tab-count:
+1'>    </span>master<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>192.168.1.4<span style='mso-tab-count:
+1'>    </span>slave1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>192.168.1.5<span style='mso-tab-count:
+1'>    </span>slave2<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>192.168.1.6<span style='mso-tab-count:
+1'>    </span>slave3<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>192.168.1.7<span style='mso-tab-count:
+1'>    </span>slave4<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>192.168.1.8<span style='mso-tab-count:
+1'>    </span>slave5</span></b><span lang=EN style='color:black'><o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Where master,
+slave1, slave2 … are the name of each computer. </span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN style='font-size:
+12.0pt;line-height:120%;color:red'>Testing:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>After saved you can
+connect other node by typing following line into terminal</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ ping -c 1 master</span></b><span
+lang=EN style='color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>You should get the
+following result.</span></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>PING apple203 (192.168.1.3) 56(84)
+bytes of data.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>64 bytes from apple203 (192.168.1.3):
+icmp_seq=1 ttl=64 time=0.039 ms<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>--- apple203 ping statistics ---<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>1 packets transmitted, 1 received, 0%
+packet loss, time 0ms<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>rtt min/avg/max/mdev =
+0.039/0.039/0.039/0.000 ms</span></b><span lang=EN style='font-size:10.0pt;
+line-height:120%;color:black'><o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<h2 style='margin-left:36.0pt;text-indent:-36.0pt;mso-text-indent-alt:-18.0pt;
+mso-list:l1 level1 lfo2'><a name="_257uwxv8s968"></a><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>VI.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Creating a user for running MPI
+jobs</span></h2>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>There are many
+reasons for creating a separate user for running MPI. Following are some of the
+concluded<span style='mso-spacerun:yes'>  </span>reasons (ref:<a
+href="https://www-users.cs.york.ac.uk/~mjf/pi_cluster/src/Building_a_simple_Beowulf_cluster.html"><span
+style='color:#1155CC'>https://www-users.cs.york.ac.uk/~mjf/pi_cluster/src/Building_a_simple_Beowulf_cluster.html</span></a>).</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>There’s no need to remember
+different user names and passwords if all nodes use the same username and
+password.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:72.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>MPICH2 can use SSH for
+communication between nodes. Passwordless login with the use of authorized keys
+only works if the username matches the one set for passwordless login. You
+don’t have to worry about this if all nodes use the same username.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:72.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>The NFS directory can be made
+accessible for the MPI users only. The MPI users all need to have the same user
+ID for this to work.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:72.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>The separate user might require
+special permissions.</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN>Type following
+command to create a new user (ptsl).</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ sudo adduser ptsl --uid 666</span></b><span
+lang=EN style='color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN>Repeat this on
+every node(same username) with the user id.</span></p>
+
+<h2 style='margin-left:36.0pt;text-indent:-36.0pt;mso-text-indent-alt:-18.0pt;
+mso-list:l1 level1 lfo2'><a name="_htphwbkr2y3u"></a><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'><span
+style='mso-spacerun:yes'> </span></span>VII.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Installing NFS</span></h2>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>NFS can share a
+local directory to every node.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>You need to install
+nfs-kernel-server on the master node, and install nfs-common on every slave.</span></p>
+
+<p class=MsoNormal><span lang=EN><span style='mso-tab-count:1'>            </span>On
+master:</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ sudo apt-get install
+nfs-kernel-server</span></b><span lang=EN style='color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN>On slave:</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ sudo apt-get install nfs-common</span></b><span
+lang=EN style='color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN>We will then share
+the ptsl home directory on master node to every slave node.</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN>We need to edit
+/etc/exports file on the master node</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ vi /etc/exports</span></b></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>/home/ptsl
+*(rw,sync,no_subtree_check)</span></b><span lang=EN style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Save and exit the
+file and restart NFS daemon on master node.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ sudo service nfs-kernel-server
+restart</span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>After that the
+directory /home/ptsl should now share with other nodes. Check this by typing
+the following command.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ showmount -e master</span></b><span
+lang=EN style='color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>And it should print
+out like this</span></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>Export list for master:</span></b><span
+lang=EN style='color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>/home/ptsl *</span></b><span lang=EN
+style='color:black'><o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>And now we should
+disable ubuntu firewall system that blocks connections from other slaves to
+master. Type this on the master node.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ sudo ufw allow from 192.168.1.0/24</span></b><span
+lang=EN style='color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>After that we mount
+the directory on every slave to the master directory.</span></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>On slave1:</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><b
+style='mso-bidi-font-weight:normal'><span lang=EN style='color:black'>$ sudo
+mount master:/home/ptsl /home/ptsl</span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>On slave2:</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><b
+style='mso-bidi-font-weight:normal'><span lang=EN style='color:black'>$ sudo
+mount master:/home/ptsl /home/ptsl</span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>On slave3:</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><b
+style='mso-bidi-font-weight:normal'><span lang=EN style='color:black'>$ sudo
+mount master:/home/ptsl /home/ptsl</span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span lang=EN>.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span lang=EN>.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span lang=EN>.</span></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Last but not least,
+we can automatically mount when computer nodes are booted. We need to edit the
+file /etc/fstab and the following line into the file.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ vi /etc/fatab</span></b></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>/home/mpiuser /home/ptsl nfs<o:p></o:p></span></b></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Once all procedures
+are finished. We can simply create a file (eg. nfs_test) at master node in the
+directory of /home/ptsl, then we can check whether other nodes have the same
+file in their /home/ptsl directory.<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+
+<h2 style='margin-left:36.0pt;text-indent:-36.0pt;mso-text-indent-alt:-18.0pt;
+mso-list:l1 level1 lfo2'><a name="_4alxznkt6u1f"></a><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'>VIII.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Setup passwordless SSH between
+each nodes</span></h2>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>For parallel
+processing, communication between master and other slave nodes is important. So
+in order to execute a program at master node as well as other nodes we need to
+create a passwordless SSH between them.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>First of all,
+install SSH on all the nodes(master as well as slave).</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ sudo apt-get install ssh<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>After successfully
+installing, we need to create a key of ssh in our /home/ptsl directory. So if
+we generate an ssh key at one node it will automatically have an ssh on every
+node (that’s why we install NFS first). Use the following command to create a
+key by superuser.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ su ptsl<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ ssh-keygen</span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN style='color:#660000'>It
+will ask to enter a passphrase, leave it empty!!!<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Finally type this
+on the master node using the user “ptsl”.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ ssh-copy-id localhost<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN style='font-size:
+12.0pt;line-height:120%;color:red'>Testing:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Now we are able to
+ssh to other nodes on the master node WITHOUT entering a password.</span></p>
+
+<p class=MsoNormal><span lang=EN><span style='mso-tab-count:1'>            </span><b
+style='mso-bidi-font-weight:normal'><span style='color:black'>$ ssh slave1<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>$ echo
+$HOSTNAME<o:p></o:p></span></b></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>slave1<o:p></o:p></span></b></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span></span></b><span
+lang=EN>If it successfully connects to every node we can proceed to install
+mpich.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='margin-left:36.0pt;text-indent:-36.0pt;mso-text-indent-alt:-18.0pt;
+mso-list:l1 level1 lfo2'><a name="_gjucncjqge7v"></a><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>IX.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Install mpich3.3.2</span></h2>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Mpich is an
+external agents that spawn and manage parallel jobs. The version we use in this
+doc is mpich3.3.2</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Type the following
+command to install mpich3</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ sudo apt-get install mpich3<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><span lang=EN>After install completes, use this command
+to check the version of installation.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ mpiexec --version<o:p></o:p></span></b></p>
+
+<h2 style='margin-left:36.0pt;text-indent:-36.0pt;mso-text-indent-alt:-18.0pt;
+mso-list:l1 level1 lfo2'><a name="_cai2gm16lipr"></a><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>X.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Setting up Hydra</span></h2>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Finally we need to
+set up Hydra which is the default process manager. We need to create a file
+that contains all the slaves you have that you are able to send out jobs to the
+slaves.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Sign in user ptsl
+at the master node.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ cd ~<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ touch hosts<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Add the following
+to the hosts file(depending on how many slaves you have).</span></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN>master<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN>slave1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN>slave2<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN>slave3<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN>.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN>.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN>.<o:p></o:p></span></b></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<h2 style='margin-left:36.0pt;text-indent:-36.0pt;mso-text-indent-alt:-18.0pt;
+mso-list:l1 level1 lfo2'><a name="_n89mv6z6qcq8"></a><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>XI.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>Parallel a job on the cluster</span></h2>
+
+<h2 style='margin-left:36.0pt'><a name="_uzk5fz2uovjt"></a><span lang=EN
+style='font-size:11.0pt;font-family:"Open Sans",sans-serif;mso-fareast-font-family:
+"Open Sans";color:windowtext'>Create a new file called mpi_hello.c in the
+directory ptsl/source (create one you don't have one) and add this to this
+file. And create a directory call bin (storing binary files)<o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>#include &lt;stdio.h&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>#include &lt;mpi.h&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>int main(int argc, char** argv) {<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'><span style='mso-spacerun:yes'>   
+</span>int myrank, nprocs;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'><span style='mso-spacerun:yes'>   
+</span>MPI_Init(&amp;argc, &amp;argv);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'><span style='mso-spacerun:yes'>   
+</span>MPI_Comm_size(MPI_COMM_WORLD, &amp;nprocs);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'><span style='mso-spacerun:yes'>   
+</span>MPI_Comm_rank(MPI_COMM_WORLD, &amp;myrank);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'><span style='mso-spacerun:yes'>   
+</span>printf(&quot;Hello from processor %d of %d\n&quot;, myrank, nprocs);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'><span style='mso-spacerun:yes'>   
+</span>MPI_Finalize();<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'><span style='mso-spacerun:yes'>   
+</span>return 0;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:11.0pt;
+margin-left:36.0pt;text-align:justify'><b style='mso-bidi-font-weight:normal'><span
+lang=EN style='color:black'>}<o:p></o:p></span></b></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>And then compile
+the code with mpi c compiler.<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN style='color:black'>$ mpicc source/mpi_hello.c -o
+bin/mpi_hello</span><span lang=EN><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN>Run it<b
+style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:11.0pt;
+margin-left:36.0pt;text-align:justify'><b style='mso-bidi-font-weight:normal'><span
+lang=EN style='color:black'>$ mpiexec -n 6 -f hosts ./bin/mpi_hello</span></b><span
+lang=EN style='color:#B7B7B7'><o:p></o:p></span></p>
+
+<table class=a border=1 cellspacing=0 cellpadding=0 width=576 style='margin-left:
+ 41.0pt;border-collapse:collapse;mso-table-layout-alt:fixed;border:none;
+ mso-border-alt:solid black 1.0pt;mso-yfti-tbllook:1536;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt;
+ mso-border-insideh:1.0pt solid black;mso-border-insidev:1.0pt solid black'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=123 valign=top style='width:92.25pt;border:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal style='margin-bottom:11.0pt'><span lang=EN>mpiexec</span></p>
+  </td>
+  <td width=453 valign=top style='width:339.75pt;border:solid black 1.0pt;
+  border-left:none;mso-border-left-alt:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal style='margin-bottom:11.0pt'><span lang=EN>command to
+  execute an mpi-compatible binary</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=123 valign=top style='width:92.25pt;border:solid black 1.0pt;
+  border-top:none;mso-border-top-alt:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal style='margin-bottom:11.0pt'><span lang=EN>-n 6 </span></p>
+  </td>
+  <td width=453 valign=top style='width:339.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black 1.0pt;mso-border-left-alt:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal style='margin-bottom:11.0pt'><span lang=EN><span
+  style='mso-spacerun:yes'> </span>the number of cores to ask for - this should
+  not be more than the sum of cores listed in the hosts. You can check how many
+  cores one computer has with this.</span></p>
+  <p class=MsoNormal style='margin-bottom:11.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=EN style='color:black'>$ nproc</span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=123 valign=top style='width:92.25pt;border:solid black 1.0pt;
+  border-top:none;mso-border-top-alt:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal style='margin-bottom:11.0pt'><span lang=EN>-f ./hosts</span></p>
+  </td>
+  <td width=453 valign=top style='width:339.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black 1.0pt;mso-border-left-alt:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal style='margin-bottom:11.0pt'><span lang=EN><span
+  style='mso-spacerun:yes'> </span>the location of the hosts file</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td width=123 valign=top style='width:92.25pt;border:solid black 1.0pt;
+  border-top:none;mso-border-top-alt:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal style='margin-bottom:11.0pt'><span lang=EN>./mpi_hello<span
+  style='mso-spacerun:yes'>  </span></span></p>
+  </td>
+  <td width=453 valign=top style='width:339.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black 1.0pt;mso-border-left-alt:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal style='margin-bottom:11.0pt'><span lang=EN>the name of the
+  binary to run</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:11.0pt;
+margin-left:36.0pt;text-align:justify'><span lang=EN style='color:#B7B7B7'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:11.0pt;
+margin-left:36.0pt;text-align:justify'><span lang=EN>Alternatively, you can
+check parallel processing using another simple example.</span></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>* -*- Mode: C; c-basic-offset:4 ; indent-tabs-mode:nil ;
+-*- */<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>/*<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-spacerun:yes'> </span>*<span
+style='mso-spacerun:yes'>  </span>(C) 2001 by Argonne National Laboratory.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-spacerun:yes'> </span>*<span
+style='mso-spacerun:yes'>  </span><span style='mso-tab-count:1'>       </span>See
+COPYRIGHT in top-level directory.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-spacerun:yes'> </span>*/<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>#include &quot;mpi.h&quot;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>#include &lt;stdio.h&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>#include &lt;math.h&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>double f(double);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>double f(double a)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>{<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>return
+(4.0 / (1.0 + a * a));<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>int main(int argc, char *argv[])<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>{<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>int n,
+myid, numprocs, i;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>double
+PI25DT = 3.141592653589793238462643;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>double
+mypi, pi, h, sum, x;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>double
+startwtime = 0.0, endwtime;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>int
+namelen;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>char
+processor_name[MPI_MAX_PROCESSOR_NAME];<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>MPI_Init(&amp;argc,
+&amp;argv);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>MPI_Comm_size(MPI_COMM_WORLD,
+&amp;numprocs);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-spacerun:yes'>   </span><span
+style='mso-tab-count:1'>         </span>MPI_Comm_rank(MPI_COMM_WORLD,
+&amp;myid);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>MPI_Get_processor_name(processor_name,
+&amp;namelen);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>fprintf(stdout, &quot;Process %d of %d is on %s\n&quot;,
+myid, numprocs,<span style='mso-spacerun:yes'>     </span>processor_name);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>fflush(stdout);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>n =
+10000;<span style='mso-spacerun:yes'>  </span>/* default # of rectangles */<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>if (myid
+== 0)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-spacerun:yes'>    </span><span
+style='mso-tab-count:1'>        </span>startwtime = MPI_Wtime();<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>MPI_Bcast(&amp;n,
+1, MPI_INT, 0, MPI_COMM_WORLD);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>h = 1.0 /
+(double) n;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>sum = 0.0;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>/* A
+slightly better approach starts from large i and works back */<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>for (i =
+myid + 1; i &lt;= n; i += numprocs) {<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-spacerun:yes'>    </span><span
+style='mso-tab-count:1'>        </span>x = h * ((double) i - 0.5);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-spacerun:yes'>    </span><span
+style='mso-tab-count:1'>        </span>sum += f(x);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>mypi = h *
+sum;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>MPI_Reduce(&amp;mypi, &amp;pi, 1, MPI_DOUBLE, MPI_SUM,
+0,MPI_COMM_WORLD);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>if (myid
+== 0) {<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-spacerun:yes'>    </span><span
+style='mso-tab-count:1'>        </span>endwtime = MPI_Wtime();<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-spacerun:yes'>    </span><span
+style='mso-tab-count:1'>        </span>printf(&quot;pi is approximately %.16f,
+Error is %.16f\n&quot;, pi, fabs(pi - PI25DT));<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-spacerun:yes'>    </span><span
+style='mso-tab-count:1'>        </span>printf(&quot;wall clock time =
+%f\n&quot;, endwtime - startwtime);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-spacerun:yes'>    </span><span
+style='mso-tab-count:1'>        </span>fflush(stdout);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>MPI_Finalize();<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'><span style='mso-tab-count:1'>            </span>return 0;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+mso-border-shadow:yes'><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='color:black'>}</span><span lang=EN><o:p></o:p></span></b></p>
+
+<div class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+lang=EN style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span></div>
+
+<h2 style='margin-left:36.0pt;text-indent:-36.0pt;mso-text-indent-alt:-18.0pt;
+mso-list:l1 level1 lfo2'><a name="_e0bi2hdg0gae"></a><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'>XII.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN>References</span></h2>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN><a
+href="https://www-users.cs.york.ac.uk/~mjf/pi_cluster/src/Building_a_simple_Beowulf_cluster.html"><span
+style='color:#1155CC'>https://www-users.cs.york.ac.uk/~mjf/pi_cluster/src/Building_a_simple_Beowulf_cluster.html</span></a></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN><a
+href="https://www.linuxjournal.com/article/5690"><span style='color:#1155CC'>https://www.linuxjournal.com/article/5690</span></a></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN><a
+href="https://nixingaround.blogspot.com/2017/01/a-homemade-beowulf-cluster-part-2.html"><span
+style='color:#1155CC'>https://nixingaround.blogspot.com/2017/01/a-homemade-beowulf-cluster-part-2.html</span></a></span></p>
+
+</div>
+
+</body>
+
+</html>
