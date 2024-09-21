@@ -31,6 +31,18 @@
       "highlights": [
         "Machine Learning"
       ]
+    },
+    {
+      "name": "National Center for Theoretical Sciences, Physics",
+      "position": "Research Assistant",
+      "url": "https://phys.ncts.ntu.edu.tw",
+      "startDate": "2024-08-01",
+      "endDate": "Now",
+      "summary": "Focus on the intersection of quantum computing and machine learning.",
+      "highlights": [
+        "Quantum Computing",
+        "Machine Learning"
+      ]
     }
   ],
   "volunteer": [],
@@ -41,7 +53,7 @@
       "area": "Quantum Optimization and Quantum Machine Learning",
       "studyType": "M. Sc. in Physics",
       "startDate": "2022-09-01",
-      "endDate": "Now",
+      "endDate": "2024-08-01",
       "score": "",
       "courses": []
     },
