@@ -4,7 +4,7 @@
 # bundle exec jekyll serve --lsi
 # -----------------------------------------------------------------------------
 
-title: Morris Huang # the website title (if blank, full name will be used instead)
+title: Yu-Chao (Morris) Huang # the website title (if blank, full name will be used instead)
 first_name: Morris
 # middle_name: R.
 last_name: Huang
