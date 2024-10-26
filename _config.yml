@@ -4,7 +4,7 @@
 # bundle exec jekyll serve --lsi
 # -----------------------------------------------------------------------------
 
-title: Yu-Chao (Morris) Huang # the website title (if blank, full name will be used instead)
+title: Morris Huang # the website title (if blank, full name will be used instead)
 first_name: Morris
 # middle_name: R.
 last_name: Huang
@@ -13,7 +13,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
+keywords: Morris-Huang, academic-website, portfolio-website  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: head_round.png  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
