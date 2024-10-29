@@ -11,15 +11,7 @@ nav_order: 5
 
 Here are some of my favorite photos of him! :smile:
 
-<div class="gallery-grid">
-{% for photo in site.static_files %}
-  {% if photo.path contains '/assets/img/warm/' %}
-  <div class="gallery-item">
-    <img src="{{ photo.path | relative_url }}" alt="Cute cat photo" onclick="openModal('{{ photo.path | relative_url }}')" loading="lazy" />
-  </div>
-  {% endif %}
-{% endfor %}
-</div>
+<div class="gallery-grid" id="galleryGrid"></div>
 
 <!-- Modal for half-screen view -->
 <div id="modal" class="modal" onclick="closeModal(event)">
@@ -117,13 +109,49 @@ Here are some of my favorite photos of him! :smile:
 </style>
 
 <script>
+// Shuffling function
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+// Pre-shuffle and load images on page load
+document.addEventListener("DOMContentLoaded", function() {
+  const photos = [
+    {% for photo in site.static_files %}
+      {% if photo.path contains '/assets/img/warm/' %}
+        { src: "{{ photo.path | relative_url }}", alt: "Cute cat photo" },
+      {% endif %}
+    {% endfor %}
+  ];
+
+  const shuffledPhotos = shuffle(photos);
+  const galleryGrid = document.getElementById("galleryGrid");
+
+  shuffledPhotos.forEach(photo => {
+    const galleryItem = document.createElement("div");
+    galleryItem.classList.add("gallery-item");
+
+    const img = document.createElement("img");
+    img.src = photo.src;
+    img.alt = photo.alt;
+    img.loading = "lazy";
+    img.onclick = () => openModal(photo.src);
+
+    galleryItem.appendChild(img);
+    galleryGrid.appendChild(galleryItem);
+  });
+});
+
 let currentIndex = 0;
-let photos = Array.from(document.querySelectorAll('.gallery-item img'));
 
 function openModal(src) {
   document.getElementById("modal").style.display = "block";
   document.getElementById("modal-img").src = src;
-  currentIndex = photos.findIndex(img => img.src.includes(src));
+  currentIndex = Array.from(document.querySelectorAll('.gallery-item img')).findIndex(img => img.src.includes(src));
 }
 
 function closeModal(event) {
@@ -133,6 +161,7 @@ function closeModal(event) {
 }
 
 function changePhoto(step) {
+  const photos = Array.from(document.querySelectorAll('.gallery-item img'));
   currentIndex = (currentIndex + step + photos.length) % photos.length;
   document.getElementById("modal-img").src = photos[currentIndex].src;
 }
