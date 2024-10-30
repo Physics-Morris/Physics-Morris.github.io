@@ -505,7 +505,7 @@ function createNoisyPattern(pattern, noiseLevel = 0.3) {
 
 function selectRandomNoisyPattern() {
     const basePattern = Math.random() < 0.5 ? pattern1 : pattern2;
-    return createNoisyPattern(basePattern, 0.2);  // 30% noise
+    return createNoisyPattern(basePattern, 0.15);
 }
 
 function visualizeRetrieval(pattern, weightMatrix, iterations = 5000) {
