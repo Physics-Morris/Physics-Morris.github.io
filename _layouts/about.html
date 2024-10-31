@@ -53,10 +53,10 @@ layout: default
               <div class="combined-container">
                 <button class="stylish-button2" id="retrive">Retrieve Pattern</button>
                 <div class="status2">
-                  The retrieve pattern is <span id="retrieved-pattern">...</span>
+                  The retrieve pattern is <span id="retrieved-pattern">...</span> :drum:
                 </div>
                 <div class="status2">
-                    (Steps: <span id="step-counter">0</span>)
+                    (Steps: <span id="step-counter">0</span>/5000)
                 </div>
             </div>
               <p>
@@ -143,6 +143,8 @@ layout: default
   
   slider.oninput = function() {
       output.innerHTML = this.value;
+      clearInterval(intervalid);
+      updateParticles();
   }
   
   var canvas = document.getElementById("myCanvas");
@@ -213,10 +215,9 @@ layout: default
   }
   
   function gaussianRandom(mean=0, stdev=1) {
-      let u = 1 - Math.random(); // Converting [0,1) to (0,1]
+      let u = 1 - Math.random(); 
       let v = Math.random();
       let z = Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
-      // Transform to the desired mean and standard deviation:
       return z * stdev + mean;
   }
   
@@ -324,6 +325,7 @@ layout: default
   }
   
   function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (var i = 0; i < NP; i++){
           ctx.beginPath();
           ctx.arc(r[i] / L * maxX, (v[i] + 3) / 6 * maxY, radius, 0, Math.PI*2);
@@ -354,6 +356,13 @@ layout: default
     Start();
     intervalid = setInterval(ani, 20);
   }
+
+  function updateParticles() {
+    ini(); 
+    draw();
+  }
+
+  updateParticles();
   
   // Restart()
   
@@ -474,7 +483,6 @@ let interval;
 const canvas2 = document.getElementById('myCanvas2');
 const ctx2 = canvas2.getContext('2d');
 
-// Initialize weights and train the network
 function initialize() {
     weightMatrix = trainHopfieldNetwork(pattern1, pattern2);
 }
@@ -560,10 +568,11 @@ function drawPattern(ctx2, pattern, dimension) {
     for (let x = 0; x < dimension; x++) {
         for (let y = 0; y < dimension; y++) {
             if (pattern[y][x] === 1) {
-                ctx2.fillStyle = 'rgba(255, 255, 255, 0)';
-            } else {
                 ctx2.fillStyle = 'rgba(142 ,166 ,222, 0.8)'; 
+            } else {
+                ctx2.fillStyle = 'rgba(255, 255, 255, 0)';
             }
+            
             ctx2.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
         }
     }
