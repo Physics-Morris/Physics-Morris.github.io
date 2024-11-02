@@ -12,7 +12,7 @@
   bibtex_show={true},
   website={https://github.com/MiuLab/PersonaLLM-Survey},
   arxiv={2406.01171},
-  abstract={Recently, methods investigating how to adapt large language models (LLMs) for specific sce- narios have gained great attention. Particularly, the concept of persona, originally adopted in dialogue literature, has re-surged as a promising avenue. However, the growing research on persona is relatively disorganized, lacking a systematic overview. To close the gap, we present a comprehensive survey to categorize the current state of the field. We identify two lines of research, namely (1) LLM Role-Playing, where personas are assigned to LLMs, and (2) LLM Personalization, where LLMs take care of user personas. To the best of our knowledge, we present the first survey tailored for LLM role-playing and LLM personalization under the uni- fied view of persona, including taxonomy, current challenges, and potential directions. To foster future endeavors, we actively maintain a paper collection available to the community.},
+  abstract={Recently, methods investigating how to adapt large language models (LLMs) for specific scenarios have gained great attention. Particularly, the concept of persona, originally adopted in dialogue literature, has re-surged as a promising avenue. However, the growing research on persona is relatively disorganized, lacking a systematic overview. To close the gap, we present a comprehensive survey to categorize the current state of the field. We identify two lines of research, namely (1) LLM Role-Playing, where personas are assigned to LLMs, and (2) LLM Personalization, where LLMs take care of user personas. To the best of our knowledge, we present the first survey tailored for LLM role-playing and LLM personalization under the uni- fied view of persona, including taxonomy, current challenges, and potential directions. To foster future endeavors, we actively maintain a paper collection available to the community.},
 }
 
 @article{xu2024bishop,
@@ -30,7 +30,7 @@
 }
 
 @article{huang2024l2o,
-  abbr={arXiv},
+  abbr={Under Review},
   title={L2O-g†: Learning to Optimize Parameterized Quantum Circuits with Fubini-Study Metric Tensor},
   author={Huang, Yu-Chao and Goan, Hsi-Sheng},
   journal={arXiv preprint arXiv:2407.14761},
@@ -40,17 +40,20 @@
   code={https://github.com/Physics-Morris/L2O-g},
   arxiv={2407.14761},
   abstract={Before the advent of fault-tolerant quantum computers, variational quantum algorithms (VQAs)
-play a crucial role in noisy intermediate-scale quantum (NISQ) machines. Conventionally, the op-
-timization of VQAs predominantly relies on manually designed optimizers. However, learning to
-optimize (L2O) demonstrates impressive performance by training small neural networks to replace
-handcrafted optimizers. In our work, we propose L2O-g†, a quantum-aware learned optimizer that
-leverages the Fubini-Study metric tensor (g†) and long short-term memory networks. We theoreti-
-cally derive the update equation inspired by the lookahead optimizer and incorporate the quantum
-geometry of the optimization landscape in the learned optimizer to balance fast convergence and gen-
-eralization. Empirically, we conduct comprehensive experiments across a range of VQA problems.
-Our results demonstrate that L2O-g† not only outperforms the current SOTA hand-designed opti-
-mizer without any hyperparameter tuning but also shows strong out-of-distribution generalization
-compared to previous L2O optimizers. We achieve this by training L2O-g† on just a single generic
-PQC instance. Our novel quantum-aware learned optimizer, L2O-g†, presents an advancement in
-addressing the challenges of VQAs, making it a valuable tool in the NISQ era.},
+play a crucial role in noisy intermediate-scale quantum (NISQ) machines. Conventionally, the optimization of VQAs predominantly relies on manually designed optimizers. However, learning to optimize (L2O) demonstrates impressive performance by training small neural networks to replace handcrafted optimizers. In our work, we propose L2O-g†, a quantum-aware learned optimizer that leverages the Fubini-Study metric tensor (g†) and long short-term memory networks. We theoretically derive the update equation inspired by the lookahead optimizer and incorporate the quantum geometry of the optimization landscape in the learned optimizer to balance fast convergence and generalization. Empirically, we conduct comprehensive experiments across a range of VQA problems.  Our results demonstrate that L2O-g† not only outperforms the current SOTA hand-designed optimizer without any hyperparameter tuning but also shows strong out-of-distribution generalization compared to previous L2O optimizers. We achieve this by training L2O-g† on just a single generic PQC instance. Our novel quantum-aware learned optimizer, L2O-g†, presents an advancement in addressing the challenges of VQAs, making it a valuable tool in the NISQ era.},
+}
+
+
+@article{hu2024stat,
+  abbr={Under Review},
+  title={On Statistical Rates of Conditional Diffusion Transformers: Approximation and Estimation},
+  author={Hu*, Jerry Yao-Chieh and Wu*, Weimin and Lee*, Yi-Chen and Huang*, Yu-Chao and Minshuo Chen and Liu, Han},
+  note={* These authors contributed equally to this work},
+  journal = {Under Review at International Conference on Learning Representations},
+  year={2024},
+  url={https://openreview.net/forum?id=c54apoozCS},
+  selected={true},
+  bibtex_show={true},
+  abstract={We investigate the approximation and estimation rates of conditional diffusion transformers (DiTs) with classifier-free guidance. We present a comprehensive analysis for ``in-context'' conditional DiTs under four common data assumptions. We show that both conditional DiTs and their latent variants lead to the minimax optimality of unconditional DiTs under identified settings. Specifically, we discretize the input domains into infinitesimal grids and then perform a term-by-term Taylor expansion on the conditional diffusion score function under Hölder smooth data assumption. This enables fine-grained use of transformers' universal approximation through a more detailed piecewise constant approximation, and hence obtains tighter bounds. Additionally, we extend our analysis to the latent setting under the linear latent subspace assumption. We not only show that latent conditional DiTs achieve lower bounds than conditional DiTs both in approximation and estimation, but also show the minimax optimality of latent unconditional DiTs. Our findings establish statistical limits for conditional and unconditional DiTs, and offer practical guidance toward developing more efficient and accurate DiT models.},
+  html={https://openreview.net/forum?id=c54apoozCS}
 }
