@@ -56,7 +56,7 @@ layout: default
                   The retrieve pattern is <span id="retrieved-pattern">...</span> :drum:
                 </div>
                 <div class="status2">
-                    (Steps: <span id="step-counter">0</span>/5000)
+                    (Steps: <span id="step-counter">0</span>/2000)
                 </div>
             </div>
               <p>
@@ -65,7 +65,7 @@ layout: default
               It acts as a dynamic energy system where neurons interact to reach stable, low-energy states, similar to particles finding equilibrium in a physical system.
               The energy function is given by \[ E = -\frac{1}{2} \sum_{i \neq j} W_{ij} s_i s_j - \sum_{i} b_i s_i, \]
               where neuron interactions mimic energy exchanges, guiding the network to "remember" stored patterns. 
-              :brain: :sparkles: Check out our paper on utilizing modern Hopfield networks for tabular learning <a href="https://proceedings.mlr.press/v235/xu24l.htmll">[Paper Link]</a>.
+              :brain: :sparkles: Check out our paper on utilizing modern Hopfield networks for tabular learning <a href="https://proceedings.mlr.press/v235/xu24l.htmll">[ICML'24]</a>.
               </p>
             </div>
           </div>
@@ -478,6 +478,9 @@ let pattern2 =[
 
 let weightMatrix = [];
 let currentPattern = [];
+let initialPattern = [];
+let isPattern1 = false;
+let isFirst = true;
 let interval;
 
 const canvas2 = document.getElementById('myCanvas2');
@@ -485,6 +488,9 @@ const ctx2 = canvas2.getContext('2d');
 
 function initialize() {
     weightMatrix = trainHopfieldNetwork(pattern1, pattern2);
+    initialPattern = selectAlternatingPattern();
+    currentPattern = JSON.parse(JSON.stringify(initialPattern));
+    drawPattern(ctx2, currentPattern, size);
 }
 
 function trainHopfieldNetwork(pattern1, pattern2) {
@@ -505,18 +511,33 @@ function trainHopfieldNetwork(pattern1, pattern2) {
     return weight;
 }
 
-function createNoisyPattern(pattern, noiseLevel = 0.3) {
-    return pattern.map(row =>
-        row.map(cell => (Math.random() < noiseLevel ? cell * -1 : cell))
+function selectAlternatingPattern() {
+    const basePattern = isPattern1 ? pattern1 : pattern2;
+    isPattern1 = !isPattern1;
+    return createNoisyPattern(basePattern, 0.25);
+}
+
+// function createNoisyPattern(pattern, noiseLevel = 0.3) {
+//     return pattern.map(row =>
+//         row.map(cell => (Math.random() < noiseLevel ? cell * -1 : cell))
+//     );
+// }
+
+function createNoisyPattern(pattern) {
+    const numRows = pattern.length;
+
+    return pattern.map((row, rowIndex) =>
+        row.map(cell => (rowIndex >= numRows / 2 ? 1 : cell))
     );
 }
+
 
 function selectRandomNoisyPattern() {
     const basePattern = Math.random() < 0.5 ? pattern1 : pattern2;
     return createNoisyPattern(basePattern, 0.15);
 }
 
-function visualizeRetrieval(pattern, weightMatrix, iterations = 5000) {
+function visualizeRetrieval(pattern, weightMatrix, iterations = 2000) {
     let iteration = 0;
     document.getElementById('step-counter').innerText = `${iteration}`;
     interval = setInterval(() => {
@@ -528,7 +549,7 @@ function visualizeRetrieval(pattern, weightMatrix, iterations = 5000) {
         retrievePatternStep(pattern, weightMatrix);
         drawPattern(ctx2, pattern, size);
         document.getElementById('step-counter').innerText = `${++iteration}`;
-    }, 0.001); 
+    }, 0.00001); 
 }
 
 function identifyRetrievedPattern(retrievedPattern) {
@@ -543,22 +564,25 @@ function identifyRetrievedPattern(retrievedPattern) {
     document.getElementById('retrieved-pattern').innerText = `${result}`;
 }
 
-function retrievePatternStep(pattern, weightMatrix) {
-    const flatPattern = pattern.flat();
-    const numUnits = flatPattern.length;
-    const index = Math.floor(Math.random() * numUnits);
-    let sum = 0;
 
-    for (let j = 0; j < numUnits; j++) {
-        sum += weightMatrix[index][j] * flatPattern[j];
-    }
-    flatPattern[index] = sum >= 0 ? 1 : -1;
+function retrievePatternStep(pattern, weightMatrix, batchSize=10) {
+    const numUnits = size * size;
 
-    for (let i = 0; i < size; i++) {
+    const indices = Array.from({ length: numUnits }, (_, i) => i)
+        .sort(() => Math.random() - 0.5)
+        .slice(0, batchSize);
+
+    indices.forEach(index => {
+        const row = Math.floor(index / size);
+        const col = index % size;
+        let sum = 0;
         for (let j = 0; j < size; j++) {
-            pattern[i][j] = flatPattern[i * size + j];
+            for (let k = 0; k < size; k++) {
+                sum += weightMatrix[row * size + col][j * size + k] * pattern[j][k];
+            }
         }
-    }
+        pattern[row][col] = sum >= 0 ? 1 : -1;
+    });
 }
 
 function drawPattern(ctx2, pattern, dimension) {
@@ -582,10 +606,16 @@ initialize();
 
 document.getElementById('retrive').addEventListener('click', () => {
     clearInterval(interval);
-    currentPattern = selectRandomNoisyPattern();
-    drawPattern(ctx2, currentPattern, size);
+    if (isFirst) {
+        currentPattern = JSON.parse(JSON.stringify(initialPattern));
+        isFirst = false;
+        document.getElementById('retrive').innerText = "Retrieve Again";
+    } else {
+        initialPattern = selectAlternatingPattern();
+        currentPattern = JSON.parse(JSON.stringify(initialPattern));
+    }
     document.getElementById('step-counter').innerText = '0'; 
     document.getElementById('retrieved-pattern').innerText = '...'; 
-    visualizeRetrieval(currentPattern, weightMatrix, 5000); 
+    visualizeRetrieval(currentPattern, weightMatrix, 2000); 
 });
 </script>
