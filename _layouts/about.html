@@ -56,7 +56,7 @@ layout: default
                   The retrieve pattern is <span id="retrieved-pattern">...</span> :drum:
                 </div>
                 <div class="status2">
-                    (Steps: <span id="step-counter">0</span>/2000)
+                    (Steps: <span id="step-counter">0</span>/3000)
                 </div>
             </div>
               <p>
@@ -523,13 +523,23 @@ function selectAlternatingPattern() {
 //     );
 // }
 
-function createNoisyPattern(pattern) {
-    const numRows = pattern.length;
+// function createNoisyPattern(pattern) {
+//     const numRows = pattern.length;
 
-    return pattern.map((row, rowIndex) =>
-        row.map(cell => (rowIndex >= numRows / 2 ? 1 : cell))
+//     return pattern.map((row, rowIndex) =>
+//         row.map(cell => (rowIndex >= numRows / 2 ? 1 : cell))
+//     );
+// }
+function createNoisyPattern(pattern, maskLeft = true) {
+    const numCols = pattern[0].length;
+
+    return pattern.map(row =>
+        row.map((cell, colIndex) =>
+            (maskLeft ? colIndex < numCols / 2 : colIndex >= numCols / 2) ? 1 : cell
+        )
     );
 }
+
 
 
 function selectRandomNoisyPattern() {
@@ -537,7 +547,7 @@ function selectRandomNoisyPattern() {
     return createNoisyPattern(basePattern, 0.15);
 }
 
-function visualizeRetrieval(pattern, weightMatrix, iterations = 2000) {
+function visualizeRetrieval(pattern, weightMatrix, iterations = 3000) {
     let iteration = 0;
     document.getElementById('step-counter').innerText = `${iteration}`;
     interval = setInterval(() => {
@@ -565,7 +575,7 @@ function identifyRetrievedPattern(retrievedPattern) {
 }
 
 
-function retrievePatternStep(pattern, weightMatrix, batchSize=10) {
+function retrievePatternStep(pattern, weightMatrix, batchSize=5) {
     const numUnits = size * size;
 
     const indices = Array.from({ length: numUnits }, (_, i) => i)
@@ -616,6 +626,6 @@ document.getElementById('retrive').addEventListener('click', () => {
     }
     document.getElementById('step-counter').innerText = '0'; 
     document.getElementById('retrieved-pattern').innerText = '...'; 
-    visualizeRetrieval(currentPattern, weightMatrix, 2000); 
+    visualizeRetrieval(currentPattern, weightMatrix, 3000); 
 });
 </script>
