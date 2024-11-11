@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>QTTT</title>
   <link rel="icon" type="image/x-icon" href="QTTT_static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -43,9 +43,12 @@
   <script src="QTTT_static/js/bulma-carousel.min.js"></script>
   <script src="QTTT_static/js/bulma-slider.min.js"></script>
   <script src="QTTT_static/js/index.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap">
 </head>
 <body>
-
 
   <section class="hero">
     <div class="hero-body">
@@ -56,7 +59,7 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Damien Jian</a><sup>*</sup>,</span>
+                <a href="" target="_blank">Damien Jian</a><sup>*</sup>,</span>
                 <span class="author-block">
                   <a href="https://physics-morris.github.io/" target="_blank">Yu-Chao Huang</a><sup>*</sup>,</span>
                   <span class="author-block">
@@ -65,14 +68,15 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">National Taiwan University<br>ArXiv</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <!-- <span class="author-block">National Taiwan University<br>ArXiv</span> -->
+                    <span class="author-block">National Taiwan University</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal contribution. Authors are listed in reverse alphabetical order.</small></span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
+                      <!-- Arxiv PDF link -->
+                      <!-- <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -80,10 +84,10 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="QTTT_static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -91,29 +95,31 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
+                  </span> -->
+
+
+                <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                    </a>
                   </span>
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://physics-morris.github.io/" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Comming Soon</span>
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -127,13 +133,19 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
+      <div class="item">
         <!-- Your video here -->
-        <source src="QTTT_static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+        <!-- <source src="QTTT_static/images/QTTT-contribution.png" -->
+        <!-- type="video/mp4"> -->
+        <div style="text-align: center;">
+        <img src="QTTT_static/images/QTTT-contribution.png" alt="QTTT Overview"  style="width: 70%; height: auto;"/>
+        </div>
+      </div>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        <b>Test-Time Training with Quantum Auto-Encoder (QTTT) as a Flexible Plug-and-Play Extension for Quantum Neural Networks (QNNs).</b>
+        QTTT adapts to distribution shift and mitigates random unitary noise present during inference by minimizing the self-supervised loss from the quantum auto-encoder.
+        QTTT integrates easily with existing QNNs, with a mild computational overhead ratio during training and test-time training that is inversely proportional to the main QNN depth. 
+        QTTT serves as a bridge toward the practical utility of QNNs in the future.
       </h2>
     </div>
   </div>
@@ -165,36 +177,105 @@
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
+
+    <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+    <h2 class="title is-3">Methodology</h2>
+    <div class="content has-text-justified">
+    QTTT features a Y-shaped QNN architecture. The main branch is a data re-uploading classifier for classification tasks, with the corresponding loss function 
+    \( \ell_{\text{ML}} (\cdot; \theta_{\text{L}}, \theta_{\text{E}}, \theta_{\text{M}}) \). The auxiliary branch is a QAE, with the corresponding loss function 
+    \( \ell_{\text{AE}} (\cdot; \theta_{\text{L}}, \theta_{\text{E}}, \theta_{\text{D}}) \). We use a multi-task objective during training, with trainable parameters 
+    \( (\theta_{\text{L}}, \theta_{\text{E}}, \theta_{\text{D}}, \theta_{\text{M}}) \). In the test-time training stage, the shared parameters 
+    \( (\theta_{\text{L}}, \theta_{\text{E}}) \) in the linear layer and encoder enable QTTT to capture distribution shifts in test data or quantum circuit errors.
+    </div>
+    </div>
+    </div>
+
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="QTTT_static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="QTTT_static/images/QTTT-architecture.drawio.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          The Overall Architecture of Test-Time Training with Quantum Auto-Encoder (QTTT).
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="QTTT_static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="QTTT_static/images/fig3.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          The general rotation layer (left) consists of a series of parameterized general single qubit gates \( U_3 \) with three trainable parameters. The entanglement layer (right) consists of a series of ladder CNOT gates for strong entanglement.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="QTTT_static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="QTTT_static/images/fig4.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+          The QAE
+          (top) consists of an amplitude encoding block, an encoder, a multi-qubit SWAP operation, and a
+          decoder. We make amplitude measurements at the end. The main task branch (bottom) consists of
+          the same amplitude encoding and the encoder in the QAE, followed by a data re-uploading block.
+          We make Pauli-Z measurements at the end. The SWAP operations discard trash qubits by swapping
+          the last two registers (both with Nt qubits) of the quantum circuits.
        </h2>
      </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="QTTT_static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <h2 class="title is-3">Experiments</h2>
+      <div class="content has-text-justified">
+      </div>
+      </div>
     </div>
+
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="QTTT_static/images/fig5a.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Test Accuracy \((\%)\) on QML-Benchmark with Different Levels of Noise (\( d_x = 5\)).
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="QTTT_static/images/fig5b.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Test Accuracy \((\%)\) on QML-Benchmark with Different Levels of Noise (\( d_x = 10\)).
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="QTTT_static/images/noisy_ttt_acc.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Test Accuracy Improvements \((\%)\) for Noisy Quantum Circuits.
+       </h2>
+     </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="QTTT_static/images/tab2.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          We select 12 noise level upper bounds \( \epsilon_\theta \) from \( \pi/40\) to \( 12\pi/40 \), applying random rotation gates with angle sampled from \( \text{Unif}(0,\epsilon_\theta) \) after each layer of the QML models.
+          QTTT-Online and QTTT-Batch improve the model accuracy by \(7.0\%\) and \(5.9\%\), respectively, compared to the vanilla data re-uploading model.
+       </h2>
+     </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="QTTT_static/images/tab3.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          <b> Ablation Studies of QTTT.</b> The best and the second best accuracy across different corruption types and quantum circuit noise level upper bounds are shown in <b>bold</b> and with <u>underlining</u>, respectively.
+       </h2>
+     </div>
   </div>
 </div>
 </div>
@@ -276,16 +357,16 @@
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{xxx2024xxx,
-        title={}, 
-        author={},
-        year={2024},
-        eprint={2406.},
-        archivePrefix={arXiv},
-        primaryClass={cs.CL},
-        url={https://arxiv.org/abs/xxx}, 
-  }</code></pre>
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{xxx2024xxx,
+  title={}, 
+  author={},
+  year={2024},
+  eprint={2406.},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/xxx},
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
