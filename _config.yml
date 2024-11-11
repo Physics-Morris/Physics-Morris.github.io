@@ -4,7 +4,7 @@
 # bundle exec jekyll serve --lsi
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: Morris Huang # the website title (if blank, full name will be used instead)
 first_name: Morris
 # middle_name: R.
 last_name: Huang
@@ -110,10 +110,10 @@ contact_note: >
 # Analytics and search engine verification
 # -----------------------------------------------------------------------------
 
-google_analytics:  # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
+google_analytics: G-Z9796LV2MV # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
 cronitor_analytics:  # cronitor RUM analytics site ID (format: XXXXXXXXX)
 
-google_site_verification:  # your google-site-verification ID (Google Search Console)
+google_site_verification: GEXEJrXTMzJpse0YrTLaHZG1JjjzV8wjuvlNDFVK58w # your google-site-verification ID (Google Search Console)
 bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
