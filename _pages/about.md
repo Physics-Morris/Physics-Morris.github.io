@@ -23,3 +23,8 @@ The equation <span style='color:#00B3CC'>|Morris⟩</span> = <span style="color:
 and (2) Developing methodologies with theoretical guarantees to ensure both optimality and practical applicability.
 
 I am a prospective Ph.D. applicant for fall 2025.
+
+> <i class="fas fa-quote-left"></i>
+> <span style="font-family: 'Gloria Hallelujah', cursive;">Somewhere, something incredible is waiting to be known.</span>
+> <i class="fas fa-quote-right"></i><br />
+> —&nbsp;Carl&nbsp;Sagan
