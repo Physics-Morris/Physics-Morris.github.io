@@ -3,6 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: "<span style='color:#00B3CC'>|Morris⟩</span> = <span style='color:#4CAF50'>|AI⟩</span> + <span style='color:#FF80AB'>|Science⟩</span>"
+
 # subtitle: Research Assistant @ <a href='https://phys.ncts.ntu.edu.tw'>National Center for Theoretical Sciences</a>
 
 profile:
@@ -20,4 +21,5 @@ Hey, my name is Morris (Yu-Chao) Huang (黃禹超 in Chinese). I have recently g
 
 The equation <span style='color:#00B3CC'>|Morris⟩</span> = <span style="color:#4CAF50">|AI⟩</span> + <span style="color:#FF80AB">|Science⟩</span> reflects my superposition of research passion at the intersection of artificial intelligence and science. My research interests lie in two main directions: (1) Theoretical understanding of the computational and statistical properties of deep learning models,
 and (2) Developing methodologies with theoretical guarantees to ensure both optimality and practical applicability.
+
 I am a prospective Ph.D. applicant for fall 2025.

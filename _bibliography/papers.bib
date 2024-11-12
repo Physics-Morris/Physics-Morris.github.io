@@ -45,7 +45,7 @@ play a crucial role in noisy intermediate-scale quantum (NISQ) machines. Convent
 
 
 @article{hu2024stat,
-  abbr={Under Review},
+  abbr={under review},
   title={On Statistical Rates of Conditional Diffusion Transformers: Approximation and Estimation},
   author={Hu*, Jerry Yao-Chieh and Wu*, Weimin and Lee*, Yi-Chen and Huang*, Yu-Chao and Minshuo Chen and Liu, Han},
   note={* These authors contributed equally to this work},
@@ -56,4 +56,20 @@ play a crucial role in noisy intermediate-scale quantum (NISQ) machines. Convent
   bibtex_show={true},
   abstract={We investigate the approximation and estimation rates of conditional diffusion transformers (DiTs) with classifier-free guidance. We present a comprehensive analysis for ``in-context'' conditional DiTs under four common data assumptions. We show that both conditional DiTs and their latent variants lead to the minimax optimality of unconditional DiTs under identified settings. Specifically, we discretize the input domains into infinitesimal grids and then perform a term-by-term Taylor expansion on the conditional diffusion score function under Hölder smooth data assumption. This enables fine-grained use of transformers' universal approximation through a more detailed piecewise constant approximation, and hence obtains tighter bounds. Additionally, we extend our analysis to the latent setting under the linear latent subspace assumption. We not only show that latent conditional DiTs achieve lower bounds than conditional DiTs both in approximation and estimation, but also show the minimax optimality of latent unconditional DiTs. Our findings establish statistical limits for conditional and unconditional DiTs, and offer practical guidance toward developing more efficient and accurate DiT models.},
   html={https://openreview.net/forum?id=c54apoozCS}
+}
+
+@misc{jian2024qttt,
+  abbr={arXiv},
+  title={Test-Time Training with Quantum Auto-Encoder: From Distribution Shift to Noisy Quantum Circuits}, 
+  author={Jian*, Damien and Huang*, Yu-Chao and Hsi-Sheng Goan},
+  note={* These authors contributed equally to this work},
+  year={2024},
+  eprint={2411.06828},
+  archivePrefix={arXiv},
+  primaryClass={quant-ph},
+  url={https://arxiv.org/abs/2411.06828}, 
+  selected={true},
+  bibtex_show={true},
+  abstract={In this paper, we propose test-time training with the quantum auto-encoder (QTTT). QTTT adapts to (1) data distribution shifts between training and testing data and (2) quantum circuit error by minimizing the self-supervised loss of the quantum auto-encoder. Empirically, we show that QTTT is robust against data distribution shifts and effective in mitigating random unitary noise in the quantum circuits during the inference. Additionally, we establish the theoretical performance guarantee of the QTTT architecture. Our novel framework presents a significant advancement in developing quantum neural networks for future real-world applications and functions as a plug-and-play extension for quantum machine learning models.},
+  website={https://physics-morris.github.io/QTTT}
 }
