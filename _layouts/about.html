@@ -2,11 +2,34 @@
 layout: default
 ---
 
+<style>
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-in {
+    display: inline-block; 
+    animation: slideInFromLeft 2s ease-out;
+  }
+</style>
+
+
 <!-- about.html -->
       <div class="post">
         <header class="post-header">
           <h1 class="post-title" style="font-family: 'Gloria Hallelujah', cursive; margin-bottom: 20px;">
-            {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
+            {% if site.title == "blank" -%}
+              <span class="font-weight-bold slide-in">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}
+            {%- else -%}
+              <span class="slide-in">{{ site.title }}</span>
+            {%- endif %}
           </h1>
           <p class="desc" style="font-family: 'Gloria Hallelujah', cursive;">{{ page.subtitle }}</p>
         <article>
