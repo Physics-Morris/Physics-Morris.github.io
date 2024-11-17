@@ -3,22 +3,55 @@ layout: default
 ---
 
 <style>
-  @keyframes slideInFromLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
+  .typing-container {
+    display: inline-block;
+    height: 2em; /* Increase height slightly for extra space */
+    overflow: hidden;
+    line-height: 1.5; /* Ensure text doesn't get clipped */
+    box-sizing: border-box; /* Include padding and border in height */
   }
 
-  .slide-in {
-    display: inline-block; 
-    animation: slideInFromLeft 2s ease-out;
+  .typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid orange; /* Cursor style */
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.5em;
+    line-height: 1.5; /* Matches container line-height */
+    box-sizing: border-box;
   }
 </style>
+
+<script>
+  const textArray = ["Morris Huang", "Enjoy your stay.", "Feel free to explore."];
+  let currentIndex = 0; 
+  let charIndex = 0;    
+  let isDeleting = false;
+  let delay = 100;     
+
+  function type() {
+    const currentText = textArray[currentIndex];
+    const displayedText = isDeleting
+      ? currentText.substring(0, charIndex--)
+      : currentText.substring(0, charIndex++);
+
+    document.getElementById('typewriter').textContent = displayedText;
+
+    if (!isDeleting && charIndex === currentText.length + 1) {
+      setTimeout(() => isDeleting = true, 1000); 
+    }
+    else if (isDeleting && charIndex === -1) {
+      isDeleting = false;
+      currentIndex = (currentIndex + 1) % textArray.length;
+    }
+
+    const typingSpeed = isDeleting ? delay / 2 : delay;
+    setTimeout(type, typingSpeed);
+  }
+
+  document.addEventListener('DOMContentLoaded', type);
+</script>
 
 
 <!-- about.html -->
@@ -28,7 +61,12 @@ layout: default
             {% if site.title == "blank" -%}
               <span class="font-weight-bold slide-in">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}
             {%- else -%}
-              <span class="slide-in">{{ site.title }}</span>
+              {{ site.title }}
+              <!-- <span class="slide-in"></span>{{ site.title }}</span> -->
+              <!-- <h1 class="typing-effect post-title" style="font-family: 'Gloria Hallelujah', cursive; margin-bottom: 20px;" id="typewriter"></h1> -->
+              <!-- <div class="typing-container">
+                <span class="typing-effect" id="typewriter"></span>
+              </div> -->
             {%- endif %}
           </h1>
           <p class="desc" style="font-family: 'Gloria Hallelujah', cursive;">{{ page.subtitle }}</p>
