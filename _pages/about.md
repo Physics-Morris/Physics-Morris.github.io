@@ -31,7 +31,7 @@ The equation <span style="font-family: 'Gloria Hallelujah', cursive; color:#00B3
 2. **Developing methodologies** with theoretical guarantees to ensure both optimality and practical applicability.
 3. Tackling **interdisciplinary scientific problems** from the machine learning perspective --- physics-based modeling, quantum computing.
 
-I am also actively seeking `PhD opportunities` for Fall 2025.
+I am actively seeking `PhD opportunities` for Fall 2025.
 
 
 
