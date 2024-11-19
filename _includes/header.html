@@ -17,7 +17,8 @@
                 {{- site.last_name -}}
               {%- endif -%}
             {%- else -%}
-              {{- site.title -}}
+              <!-- {{- site.title -}} -->
+              <span class="desc" style="font-family: 'Gloria Hallelujah', cursive;">{{ site.title }}</span>
             {%- endif -%}
           </a>
           {%- elsif site.enable_navbar_social -%}
