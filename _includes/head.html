@@ -178,6 +178,25 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+          },
+          options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          },
+          loader: { load: ['[tex]/physics'] } // Load extensions only if needed
+        };
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            MathJax.typesetPromise(['#math-content']);
+        });
+    </script>
+    <!-- MathJax Script -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
