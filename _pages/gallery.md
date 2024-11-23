@@ -1,6 +1,6 @@
 ---
 layout: default
-title: gallery
+title: Gallery
 permalink: /gallery/
 description: A photo collection of my cat named 饋修 (Warm in Taiwanese).
 nav: true

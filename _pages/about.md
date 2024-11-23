@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: "<span style='color:#00B3CC'>\\(|\\)Morris\\(\\rangle\\)</span> = <span style='color:#4CAF50'>\\( {\\alpha} |\\)AI\\(\\rangle\\)</span> + <span style='color:#FF80AB'>\\( {\\beta} |\\)Science\\(\\rangle\\)</span>"
 
@@ -13,7 +13,7 @@ profile:
   more_info: >
     <p>
         <i class="fas fa-envelope"></i> Email: <br> <a href="mailto:yuchaohuang@g.ntu.edu.tw" style="text-decoration: none;">
-            yuchaohuang<span style="color: inherit;">[at]</span>g.ntu.edu.tw
+            yuchaohuang<span style="color: inherit;"> [at] </span>g.ntu.edu.tw
         </a>
     </p>
 
