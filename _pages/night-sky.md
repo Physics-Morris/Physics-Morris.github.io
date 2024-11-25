@@ -22,6 +22,7 @@ nav_order: 6
   z-index: -1;
   overflow: hidden;
   }
+
   .sky-content {
     position: relative;
     z-index: 1; 
@@ -29,7 +30,7 @@ nav_order: 6
     text-align: center;
     padding: 10px;
     margin-top: 0px; 
-    height: 80vh;
+    height: 120vh;
   }
   .copy-btn {
     margin: 15px 0;
@@ -63,29 +64,72 @@ nav_order: 6
   .build-with a:hover, .source-code a:hover {
     color: #ffffff;
   }
+
+  body.fullscreen .sky-content,
+  body.fullscreen header,
+  body.fullscreen footer {
+    display: none; 
+  }
+
+  body.fullscreen #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+  }
+
+  .fullscreen-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .fullscreen-btn:hover {
+    background-color: #ffddaa;
+    color: #000;
+    transform: scale(1.05);
+  }
 </style>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <div id="particles-js"></div>
 
-<div class="sky-content">
+<div class="sky-content" id="sky-content">
   <h1 class="post-title" style="font-family: 'Gloria Hallelujah', cursive; margin-bottom: 20px;">Welcome to the Night Sky</h1>
     
   <p class="build-with">
-  Built with <a href="https://vincentgarreau.com/particles.js/" target="_blank">Particles.js</a>. 
-  Source code here <a href="https://github.com/Physics-Morris/night-sky" target="_blank" style="color: #ffddaa;">[GitHub]</a>. :sparkles: Share this Night Sky ~~ :milky_way:
+  :sparkles: Built with <a href="https://vincentgarreau.com/particles.js/" target="_blank">Particles.js</a>. 
+  See source code here <a href="https://github.com/Physics-Morris/night-sky" target="_blank" style="color: #ffddaa;">[GitHub]</a>. Share this night sky ~ :milky_way:
   </p>
+
+  <p>
+  <a class="twitter-share-button"
+    href="https://twitter.com/intent/tweet?text=Check%20out%20this%20beautiful%20Night%20Sky%20Wallpaper!&url=https://github.com/Physics-Morris/night-sky&hashtags=NightSky,Wallpaper,ParticlesJS" data-size="large"> Tweet 
+  </a>
+  </p>
+
+  <button id="fullscreen-button" class="fullscreen-btn">Sky Wallpaper</button>
 
 </div>
 
 
 <script>
-  particlesJS("particles-js", {
+  function initializeParticles() {
+    particlesJS("particles-js", {
       "particles": {
         "number": {
-          "value": 500,
+          "value": 5000,
           "density": {
             "enable": true,
-            "value_area": 800 
+            "value_area": 2000 
           }
         },
         "color": {
@@ -123,7 +167,7 @@ nav_order: 6
         },
         "move": {
           "enable": true,
-          "speed": 0.1, 
+          "speed": 0.01, 
           "direction": "none",
           "random": true,
           "straight": false,
@@ -145,6 +189,18 @@ nav_order: 6
       },
       "retina_detect": true
     });
+  }
+
+  // Function to destroy particles instance
+  function destroyParticles() {
+    if (window.pJSDom && window.pJSDom.length > 0) {
+      window.pJSDom[0].pJS.fn.vendors.destroypJS();
+      window.pJSDom = [];
+    }
+  }
+
+  // Initial particle setup
+  initializeParticles();
 
 function createShootingStar() {
   const canvas = document.querySelector(".particles-js-canvas-el");
@@ -164,7 +220,7 @@ function createShootingStar() {
   const star = {
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
-    size: Math.random() * 5 + 1,
+    size: Math.random() * 5 + 2,
     speedX: Math.random() * 8 - 2,
     speedY: Math.random() * 8 - 2,
     opacity: 1,
@@ -210,6 +266,7 @@ function createShootingStar() {
     requestAnimationFrame(animateStar);
   }
 
+
   animateStar();
 }
 
@@ -241,4 +298,58 @@ setInterval(createShootingStar, Math.random() * 500 + 250);
       console.error("Failed to copy:", err);
     }
   });
+</script>
+
+<script>
+  const fullscreenButton = document.getElementById('fullscreen-button');
+  const particlesContainer = document.getElementById('particles-js');
+
+  fullscreenButton.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+      particlesContainer.requestFullscreen()
+        .then(() => {
+          destroyParticles();
+          initializeParticles();
+          document.body.classList.add('fullscreen');
+        })
+        .catch((err) => {
+          console.error(`Error attempting fullscreen: ${err.message}`);
+        });
+    } else {
+      document.exitFullscreen()
+        .then(() => {
+          destroyParticles();
+          initializeParticles();
+          document.body.classList.remove('fullscreen');
+        })
+        .catch((err) => {
+          console.error(`Error exiting fullscreen: ${err.message}`);
+        });
+    }
+  });
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      destroyParticles();
+      initializeParticles();
+      document.body.classList.remove('fullscreen');
+    }
+  });
+</script>
+
+<script>
+  function shareNightSky() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Night Sky Wallpaper',
+        url: window.location.href
+      }).then(() => {
+        console.log('Thanks for sharing!');
+      }).catch((err) => {
+        console.error('Error sharing:', err);
+      });
+    } else {
+      alert("Your browser doesn't support sharing. You can manually copy the link: " + window.location.href);
+    }
+  }
 </script>
