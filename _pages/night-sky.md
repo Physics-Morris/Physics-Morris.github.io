@@ -2,7 +2,6 @@
 layout: default
 title: Night Sky
 permalink: /night-sky/
-description: A photo collection of my cat named 饋修 (Warm in Taiwanese).
 nav: true
 nav_order: 6
 ---
