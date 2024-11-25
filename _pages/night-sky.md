@@ -115,7 +115,7 @@ nav_order: 6
   </a>
   </p>
 
-  <button id="fullscreen-button" class="fullscreen-btn">Sky Wallpaper</button>
+  <button id="fullscreen-button" class="fullscreen-btn">Full Screen</button>
 
 </div>
 
