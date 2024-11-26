@@ -198,7 +198,6 @@ nav_order: 6
     }
   }
 
-  // Initial particle setup
   initializeParticles();
 
 function createShootingStar() {
@@ -229,7 +228,7 @@ function createShootingStar() {
 
   function animateStar() {
     if (!star.fading) {
-      star.opacity -= 0.01; 
+      star.opacity -= 0.008; 
       if (star.opacity <= 0) {
         return; 
       }
@@ -241,7 +240,7 @@ function createShootingStar() {
 
     star.trailLength += velocity * 0.5;
 
-    // Draw trail
+    // trail
     const gradient = ctx.createLinearGradient(star.x, star.y, tailX, tailY);
     gradient.addColorStop(0, `rgba(255, 255, 255, ${star.opacity})`);
     gradient.addColorStop(1, `rgba(${parseColor(randomElement.colors[0])}, 0)`);
@@ -249,13 +248,14 @@ function createShootingStar() {
     ctx.globalCompositeOperation = "lighter";
     ctx.beginPath();
     ctx.strokeStyle = gradient;
-    ctx.lineWidth = star.size;
+
+    ctx.lineWidth = Math.max(1, star.size - star.trailLength / 50);
     ctx.moveTo(star.x, star.y);
     ctx.lineTo(tailX, tailY);
     ctx.stroke();
 
     ctx.beginPath();
-    ctx.arc(star.x, star.y, star.size * 0.5, 0, Math.PI * 2);
+    ctx.arc(star.x, star.y, star.size * 0.4, 0, Math.PI * 2);
     ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
     ctx.fill();
 
