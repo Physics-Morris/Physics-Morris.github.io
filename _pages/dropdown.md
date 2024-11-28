@@ -1,13 +1,14 @@
 ---
 layout: page
-title: submenus
-nav: false
+title: Misc
+nav: true
 nav_order: 7
 dropdown: true
 children:
-    - title: publications
-      permalink: /publications/
-    - title: divider
-    - title: projects
-      permalink: /projects/
+    - title: Night Sky
+      permalink: /night-sky/
+    - title: Gallery
+      permalink: /gallery/
+    - title: Piano
+      permalink: /piano/
 ---

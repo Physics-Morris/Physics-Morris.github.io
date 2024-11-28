@@ -2,7 +2,7 @@
 layout: default
 title: Night Sky
 permalink: /night-sky/
-nav: true
+nav: false
 nav_order: 6
 ---
 
