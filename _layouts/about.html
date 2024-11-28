@@ -17,8 +17,7 @@ layout: default
             {% if site.title == "blank" -%}
               <span class="font-weight-bold slide-in">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}
             {%- else -%}
-              <div id="typedtext"></div>
-              <!-- {{ site.title }} -->
+              {{ site.title }}
             {%- endif %}
           </h1>
           <p class="desc" style="font-family: 'Gloria Hallelujah', cursive;">{{ page.subtitle }}</p>
@@ -42,6 +41,7 @@ layout: default
             {% endif -%}
             {%- if page.profile.more_info %}
             <div class="more-info">
+              <div id="typedtext"></div>
               {{ page.profile.more_info }}
             </div>
             {%- endif %}
