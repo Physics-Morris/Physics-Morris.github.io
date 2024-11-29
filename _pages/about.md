@@ -25,10 +25,12 @@ social: true  # includes social icons at the bottom of the page
 ---
 Hey, my name is Morris (Yu-Chao) Huang (黃禹超 in Chinese). I have recently graduated with a `M.Sc in Physics` under the guidance of <a href='https://www.phys.ntu.edu.tw/enphysics/goan.html'>Prof. Hsi-Sheng Goan</a> at <a href='https://www.ntu.edu.tw/english/'>`National Taiwan University`</a>. I am currently working as research assistant at <a href='https://phys.ncts.ntu.edu.tw'>National Center for Theoretical Sciences</a>. 
 
-The equation <span style="color:#00B3CC">\\(|\\)Morris\\(\\rangle\\)</span> = <span style="color:#4CAF50">\\( {\\alpha} |\\)AI\\(\\rangle\\)</span> + <span style="color:#FF80AB">\\( {\\beta} |\\)Science\\(\\rangle\\)</span> reflects my `superposition of research passion` at the intersection of AI and science. My research interests lie in three main directions: 
-1. `Developing methodologies` with theoretical guarantees to ensure both optimality and practical applicability. **[[ICML'24](https://arxiv.org/abs/2404.03830), [ArXiv](https://arxiv.org/abs/2407.14761), [ArXiv](https://arxiv.org/abs/2411.06828)]**
-2. `Theoretical understanding` of the computational and statistical properties of deep learning models. **[[ArXiv](https://arxiv.org/abs/2411.17522)]**
-3. Tackling `interdisciplinary scientific problems` from the machine learning perspective --- physics-based modeling, quantum computing. **[[ArXiv](https://arxiv.org/abs/2407.14761), [ArXiv](https://arxiv.org/abs/2411.06828)]**
+The equation <span style="color:#00B3CC">\\(|\\)Morris\\(\\rangle\\)</span> = <span style="color:#4CAF50">\\( {\\alpha} |\\)AI\\(\\rangle\\)</span> + <span style="color:#FF80AB">\\( {\\beta} |\\)Science\\(\\rangle\\)</span> reflects my `superposition of research passion` at the intersection of AI and science. 
+My research interests lie in following directions: 
+- `Developing methodologies` with theoretical guarantees to ensure both optimality and practical applicability. **[[ICML'24](https://arxiv.org/abs/2404.03830), [ArXiv](https://arxiv.org/abs/2407.14761), [ArXiv](https://arxiv.org/abs/2411.06828)]**
+- `Theoretical understanding` of the computational and statistical properties of deep learning models. **[[ArXiv](https://arxiv.org/abs/2411.17522)]**
+- Tackling `interdisciplinary scientific problems` from the machine learning perspective --- physics-based modeling, quantum computing. **[[ArXiv](https://arxiv.org/abs/2407.14761), [ArXiv](https://arxiv.org/abs/2411.06828)]**
+- Advancing domain adaptation and scientific discovery frameworks for `Large Language Models`. **[[EMNLP'24](https://aclanthology.org/2024.findings-emnlp.969/)]**
 
 I am actively seeking `PhD opportunities` for Fall 2025.
 
