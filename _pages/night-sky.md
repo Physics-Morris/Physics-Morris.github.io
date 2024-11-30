@@ -18,9 +18,21 @@ nav_order: 6
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -2;
   overflow: hidden;
+  background: black;
   }
+
+  #milky-way-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    pointer-events: none; 
+  }
+
 
   .sky-content {
     position: relative;
@@ -77,6 +89,7 @@ nav_order: 6
     width: 100%;
     height: 100%;
     z-index: 1; 
+    background: black;
   }
 
   .fullscreen-btn {
@@ -97,8 +110,11 @@ nav_order: 6
     transform: scale(1.05);
   }
 </style>
+
+
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+<div id="milky-way-layer"></div>
 <div id="particles-js"></div>
 
 <div class="sky-content" id="sky-content">
@@ -125,7 +141,7 @@ nav_order: 6
     particlesJS("particles-js", {
       "particles": {
         "number": {
-          "value": 5000,
+          "value": 7000,
           "density": {
             "enable": true,
             "value_area": 2000 
@@ -190,15 +206,17 @@ nav_order: 6
     });
   }
 
-  // Function to destroy particles instance
-  function destroyParticles() {
-    if (window.pJSDom && window.pJSDom.length > 0) {
-      window.pJSDom[0].pJS.fn.vendors.destroypJS();
-      window.pJSDom = [];
-    }
-  }
+initializeParticles();
 
-  initializeParticles();
+
+
+function destroyParticles() {
+  if (window.pJSDom && window.pJSDom.length > 0) {
+    window.pJSDom[0].pJS.fn.vendors.destroypJS();
+    window.pJSDom = [];
+  }
+}
+
 
 function createShootingStar() {
   const canvas = document.querySelector(".particles-js-canvas-el");
