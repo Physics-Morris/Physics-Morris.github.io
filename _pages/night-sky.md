@@ -114,7 +114,6 @@ nav_order: 6
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<div id="milky-way-layer"></div>
 <div id="particles-js"></div>
 
 <div class="sky-content" id="sky-content">
