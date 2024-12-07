@@ -17,7 +17,7 @@ li,
 span,
 strong {
   color: var(--global-text-color);
-  font-family: 'Newsreader', 'IBM Plex Sans', sans-serif;
+  font-family: 'IBM Plex Sans', 'Newsreader', sans-serif;
 }
 
 hr {
@@ -66,7 +66,7 @@ blockquote {
   border-left: 5px solid var(--global-theme-color);
   margin: 1.5em 0;
   padding: 1em;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 
   p {
     margin-bottom: 0;
