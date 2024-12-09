@@ -221,11 +221,11 @@ layout: default
       "Hi, I'm Morris Huang",
       "Welcome to my website !",
       // "Exploring AI and Science",
-      "Hover to reveal the AI me ~"
+      "Hover to reveal AI-generated me ~"
   ];
 
-  let iSpeed = 100;
-  let iDeleteSpeed = 50; 
+  let iSpeed = 80;
+  let iDeleteSpeed = 30; 
   let iPauseBetween = 1500;
   let iIndex = 0;
   let iTextPos = 0;
@@ -252,7 +252,7 @@ layout: default
           if (iTextPos < 0) {
               iDirection = 1;
               iIndex = (iIndex + 1) % aText.length;
-              setTimeout(typewriter, 500);
+              setTimeout(typewriter, 300);
               return;
           }
       }
