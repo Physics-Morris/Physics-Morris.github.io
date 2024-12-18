@@ -2,11 +2,11 @@
 layout: distill
 title: Plasma Two Stream Instability
 description: Introduction to two stream instability in plasma through code
-tags: simulation
-giscus_comments: false
+tags: Simulation
+giscus_comments: true
 date: 2019-02-28
-featured: true
-categories: physics
+featured: false
+categories: Physics
 thumbnail: assets/img/twostream/thumb.png
 
 authors:
