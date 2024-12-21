@@ -13,10 +13,10 @@ Here are some of my favorite photos of him! :smile:
 
 <div class="gallery-grid" id="galleryGrid"></div>
 
-<!-- Modal for half-screen view -->
+<!-- Modal for viewing images -->
 <div id="modal" class="modal" onclick="closeModal(event)">
   <div class="modal-content-wrapper">
-    <img class="modal-content" id="modal-img">
+    <img class="modal-content" id="modal-img" alt="Gallery Image">
     <div class="caption" id="modal-caption"></div>
     <a class="prev" onclick="changePhoto(-1)">&#10094;</a>
     <a class="next" onclick="changePhoto(1)">&#10095;</a>
@@ -46,7 +46,6 @@ Here are some of my favorite photos of him! :smile:
   cursor: pointer;
 }
 
-/* Modal Style */
 .modal {
   display: none;
   position: fixed;
@@ -55,7 +54,7 @@ Here are some of my favorite photos of him! :smile:
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.85); /* Dark transparent background */
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .modal-content-wrapper {
@@ -73,7 +72,7 @@ Here are some of my favorite photos of him! :smile:
   max-height: 80vh;
   object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow to make it stand out */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .caption {
@@ -83,33 +82,45 @@ Here are some of my favorite photos of him! :smile:
   margin-top: 10px;
 }
 
-/* Navigation Buttons */
 .prev, .next {
   position: absolute;
   top: 50%;
-  color: #333; /* Dark gray arrows for better visibility */
+  color: #fff;
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
   user-select: none;
   transform: translateY(-50%);
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.6); /* Slightly transparent background */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #fff;
   border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 1001; /* Ensures the buttons are above the image */
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
-
 .prev:hover, .next:hover {
-  color: #000; /* Darker hover effect */
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.prev {
+  left: -70px; /* Position outside the image */
+}
+
+.next {
+  right: -70px; /* Position outside the image */
 }
 
 </style>
 
 <script>
-// Shuffling function
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -118,7 +129,7 @@ function shuffle(array) {
   return array;
 }
 
-// Pre-shuffle and load images on page load
+// Load and display images
 document.addEventListener("DOMContentLoaded", function() {
   const photos = [
     {% for photo in site.static_files %}
@@ -154,6 +165,7 @@ function openModal(src) {
   currentIndex = Array.from(document.querySelectorAll('.gallery-item img')).findIndex(img => img.src.includes(src));
 }
 
+// Close modal
 function closeModal(event) {
   if (event.target.classList.contains('modal')) {
     document.getElementById("modal").style.display = "none";
