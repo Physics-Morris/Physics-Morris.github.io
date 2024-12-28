@@ -66,7 +66,49 @@ layout: default
     aspect-ratio: 3449 / 4435; 
   }
 }
+</style>
 
+<style>
+details {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px 0;
+  background-color: var(--global-card-bg-color);
+  color: var(--global-text-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--global-text-color);
+
+    &:hover {
+      color: var(--global-hover-color);
+    }
+  }
+
+  .control-icon {
+    fill: var(--global-theme-color);
+    transition: 0.3s ease;
+  }
+
+  details[open] {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    .control-icon-expand {
+      display: none;
+    }
+
+    .control-icon-close {
+      display: inline;
+    }
+  }
+}
 </style>
 
 
@@ -113,7 +155,20 @@ layout: default
             {{ content }}
           </div>
 
-          <h2><a style="color: inherit;">Machine Learning Demo - Hopfield Networks</a></h2>
+          <details>
+            <summary>
+              <h2 style="display: inline; cursor: pointer;">
+                Machine Learning Demo - Hopfield Networks
+              </h2>
+              <span>
+                <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation">
+                  <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                </svg>
+                <svg class="control-icon control-icon-close" width="24" height="24" role="presentation" style="display:none;">
+                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                </svg>
+              </span>
+            </summary>
           <div class="main-container2">
             <div class="canvas-container2">
                 <canvas id="myCanvas2" width="300" height="300"></canvas>
@@ -139,9 +194,22 @@ layout: default
               </p>
             </div>
           </div>
+          </details>
 
-
-          <h2><a href="{{ '/projects/twostream/' | relative_url }}" style="color: inherit;">Physics Demo - Two Stream Instability</a></h2>
+          <details>
+          <summary>
+            <h2 style="display: inline; cursor: pointer;">
+              Physics Demo - Two Stream Instability
+            </h2>
+          <span>
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation">
+              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+            </svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation" style="display:none;">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+          </span>
+          </summary>
           <div class="main-container">
             <div class="canvas-container">
                 <canvas id="myCanvas" width="600" height="450"></canvas>
@@ -158,13 +226,13 @@ layout: default
                 This instability arises from the transfer of energy 
                 between particles in the plasma and EM wave, 
                 leading to the exponential growth of certain wave modes, 
-                described by the dispersion relation.
+                described by the dispersion relation:
                 \[ 1 = \dfrac{\omega_p^2/2}{(\omega+\omega_D)^2} + \dfrac{\omega_p^2/2}{(\omega-\omega_D)^2}. \]
-                (See blog post for more detail :smile:)
+                (See <a href="{{ '/projects/twostream/' | relative_url }}">blog post</a> for more detail :smile:)
                 </p>
             </div>
           </div>
-
+          </details>
 
           <!-- News -->
           {% if page.news and site.announcements.enabled -%}
