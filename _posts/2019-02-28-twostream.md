@@ -10,7 +10,7 @@ categories: Physics
 thumbnail: assets/img/twostream/thumb.png
 
 authors:
-  - name: Morris Huang
+  - name: Yu-Chao Huang
     url: "https://physics-morris.github.io"
     affiliations:
       name: Physics, NTU

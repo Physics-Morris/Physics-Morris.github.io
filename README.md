@@ -1,6 +1,6 @@
 # physics-morris.gihub.com
 
-This is the website of the homepage of morris huang. It is using Jekyll, hosted on GitHub, and was originally based on the [al-folio theme](https://github.com/alshedivat/al-folio), which is based on the [folio theme](https://github.com/bogoli/-folio).
+This is the website of the homepage of yu-chao huang. It is using Jekyll, hosted on GitHub, and was originally based on the [al-folio theme](https://github.com/alshedivat/al-folio), which is based on the [folio theme](https://github.com/bogoli/-folio).
 
 ## Run Locally
 
