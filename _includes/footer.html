@@ -1,50 +1,181 @@
-
-    <style>
-    #clustrmaps-container {
-    width: 8vw; 
-    float: right;
+<style>
+  #clustrmaps-container {
+    width: 10vw;
+    float: left;
     pointer-events: none;
+  }
+  @media screen and (max-width: 600px) {
+    #clustrmaps-container {
+      width: 30%;
+      float: left;
     }
-    @media screen and (max-width: 600px) { /* Adjust the breakpoint as needed */
-        #clustrmaps-container {
-            width: 35%; /* Adjust the width for smaller screens */
-            float: right; /* Keep it right-aligned or change as needed */
-        }
-    }
-    </style>
+  }
 
-    {% if site.footer_fixed %}
-    <footer class="fixed-bottom">
-      <div class="container mt-0">
-        <div id="clustrmaps-container">
-        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=XDvFmaRddfU91BwoWuLT6tdJsfWAV43WimAnxx0RGZ4"></script>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  .footer-section {
+    position: relative;
+    color: var(--global-text-color);
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .footer-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px 0;
+  }
+  .footer-logo {
+    margin-bottom: 30px;
+  }
+  .footer-logo img {
+    max-width: 200px;
+  }
+  .footer-text p {
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: var(--global-text-color)e;
+    line-height: 28px;
+  }
+  .footer-viewcount {
+    margin-top: 20px;
+  }
+  .footer-viewcount span {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--global-text-color);
+  }
+  .footer-viewcount a img {
+    vertical-align: middle;
+  }
+  .footer-widget-heading h3 {
+    color: var(--global-text-color);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .footer-widget-heading h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    width: 50px;
+    background: var(--global-theme-color);
+  }
+  .footer-widget ul li {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    margin-bottom: 12px;
+  }
+  .footer-widget ul li a:hover {
+    color: var(--global-theme-color);
+  }
+  .footer-widget ul li a {
+    color: var(--global-text-color);
+    text-transform: capitalize;
+  }
+  .copyright-area {
+    padding: 25px 0;
+    text-align: center;
+  }
+  .copyright-text p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--global-text-color);
+  }
+</style>
+<style>
+  .logo {
+    width: 140px;
+  }
+  .theme-light-logo {
+    display: block;
+  }
+  .theme-dark-logo {
+    display: none;
+  }
+  body.dark-mode .theme-light-logo {
+    display: none;
+  }
+  body.dark-mode .theme-dark-logo {
+    display: block;
+  }
+</style>
+
+{% if site.footer_fixed %}
+  <footer class="footer-section fixed-bottom">
+{% else %}
+  <footer class="footer-section sticky-bottom mt-5">
+{% endif %}
+  <div class="container">
+    <div class="footer-content">
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 mb-50">
+          <div class="footer-widget">
+            <div class="footer-logo">
+              <a href="{{ site.baseurl }}/">
+                  <img src="/assets/img/ch_name.svg" class="img-fluid" alt="logo" style="width: 140px;">
+              </a>
+            </div>
+            <div class="footer-text">
+              <p>
+                &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
+              </p>
+              {%- if site.impressum_path -%}
+              <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
+              {%- endif -%}
+              {%- if site.last_updated -%}
+              <p>
+              Last updated: {{ "now" | date: '%B %d, %Y' }}.
+              </p>
+              {%- endif %}
+            </div>
+            <!-- View Count (replacing the social icons) -->
+            <!-- <div class="footer-viewcount">
+              <span>Page Views</span>
+              <a href="https://physics-morris.github.io/" target="_blank" rel="noopener noreferrer">
+                <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmorris-huang.com&count_bg=%23317773&title_bg=%23F96167&icon=react.svg&icon_color=%23FFFFFF&title=Views&edge_flat=false" alt="Page Views Badge"/>
+              </a>
+            </div> -->
+          </div>
         </div>
-        &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
-        {%- if site.impressum_path -%}
-        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
-        {%- endif -%}
-        {%- if site.last_updated -%}
-        Last updated: {{ "now" | date: '%B %d, %Y' }}.
-        {%- endif %}
-      </div>
-    </footer>
-    {%- else -%}
-    <footer class="sticky-bottom mt-5">
-      <div class="container">
-        <div id="clustrmaps-container">
-        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=XDvFmaRddfU91BwoWuLT6tdJsfWAV43WimAnxx0RGZ4"></script>
+
+        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+          <div class="footer-widget">
+            <div class="footer-widget-heading">
+              <h3>Useful Links</h3>
+            </div>
+            <ul>
+              <li><a href="{{ site.baseurl }}/">Morris Huang</a></li>
+              <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://arxiv.org" target="_blank" rel="noopener">ArXiv</a></li>
+              <li><a href="https://www.alphaxiv.org/explore" target="_blank" rel="noopener">AlphaXiv</a></li>
+              <li><a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><a href="https://huggingface.co" target="_blank" rel="noopener">Hugging Face</a></li>
+              <li><a href="https://wandb.ai" target="_blank" rel="noopener">Weights &amp; Biases</a></li>
+              <li><a href="https://blog.ml.cmu.edu/" target="_blank" rel="noopener">CMU ML Blog</a></li>
+            </ul>
+          </div>
         </div>
-        &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
-        {%- if site.impressum_path -%}
-        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
-        {%- endif -%}
-        {%- if site.last_updated -%}
-        Last updated: {{ "now" | date: '%B %d, %Y' }}.
-        {%- endif %}
-        <br><br>
-        <a href="https://physics-morris.github.io/" target="_blank" rel="noopener noreferrer">
-        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmorris-huang.com&count_bg=%23317773&title_bg=%23F96167&icon=react.svg&icon_color=%23FFFFFF&title=Views&edge_flat=false"/>
-        </a>
+
+        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+          <div class="footer-widget">
+            <div class="footer-widget-heading">
+              <h3>Views</h3>
+            </div>
+            <div class="footer-globe">
+              <div id="clustrmaps-container">
+                <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=f7f7f7&w=250&t=tt&d=XDvFmaRddfU91BwoWuLT6tdJsfWAV43WimAnxx0RGZ4&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
-    {%- endif %}
+    </div>
+  </div>
+</footer>
