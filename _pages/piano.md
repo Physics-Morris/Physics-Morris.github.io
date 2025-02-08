@@ -8,14 +8,18 @@ nav_order: 5
 ---
 
 # Rachmaninoff's 18th variation from "Rhapsody on a Theme of Paganini"
+
+> <i class="fas fa-quote-left"></i>
+> <span style="font-family: 'Gloria Hallelujah', cursive;">If I were not a physicist, I would probably be a musician. I often think in music. I live my daydreams in music. I see my life in terms of music.</span>
+> <i class="fas fa-quote-right"></i><br />
+> —&nbsp;Albert&nbsp;Einstein
+
+<!-- <div class="caption"> -->
+I started teaching myself piano back in 2022, and it's become one of my favorite ways to unwind. :musical_keyboard: :sparkles:
+<!-- </div> -->
+
 <div class="video-container">
     <iframe class="video-embed" src="https://www.youtube.com/embed/GTyMjKYR1nU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-
-
-<div class="caption">
-I started teaching myself piano back in 2022, and it's become one of my favorite ways to unwind. :musical_keyboard: :sparkles:
 </div>
 
 <style>
