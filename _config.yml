@@ -4,13 +4,13 @@
 # bundle exec jekyll serve --lsi
 # -----------------------------------------------------------------------------
 
-title: "Yu-Chao Huang (Morris)" # the website title (if blank, full name will be used instead)
+title: "Morris Huang" # the website title (if blank, full name will be used instead)
 first_name: Morris
 # middle_name: R.
 last_name: Huang
 email: yuchaohuang@g.ntu.edu.tw
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Yu-Chao Huang personal website.
+  Morris Huang personal website.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 keywords: Morris-Huang, academic-website, portfolio-website  # add your own keywords or leave empty
