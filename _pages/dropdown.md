@@ -11,4 +11,6 @@ children:
       permalink: /gallery/
     - title: Piano
       permalink: /piano/
+    - title: Physics Demo
+      permalink: /physics/
 ---

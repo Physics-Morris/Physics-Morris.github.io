@@ -111,18 +111,159 @@ details {
 }
 </style>
 
+<style>
+  .timeline {
+    margin: 50px 0;
+    list-style-type: none;
+    border: none;
+    display: flex;
+    padding: 0;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .timeline li {
+    transition: all 200ms ease-in;
+    flex: 1;
+    position: relative;
+    border: none;
+    list-style: none;
+    margin-bottom: 80px;
+  }
+
+  .tstamp {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-weight: 100;
+    white-space: nowrap;
+    z-index: 2;
+  }
+
+  .timeline li:first-child .tdesc {
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%, var(--global-text-color) 20%, var(--global-text-color) 100%);
+  }
+
+  .timeline li:last-child .tdesc {
+    background: linear-gradient(to left, rgba(0,0,0,0) 0%, var(--global-text-color) 20%, var(--global-text-color) 100%);
+  }
+
+  .timeline li:not(:first-child):not(:last-child) .tdesc {
+    background: var(--global-text-color);
+  }
+
+  .tdesc {
+    padding: 0 5px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 5px; 
+    margin-top: 20px;
+  }
+
+  .tdesc span {
+    padding-top: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1; 
+  }
+
+  .tdesc span .line1 {
+    color: var(--global-theme-color);
+    margin-top: 0px;
+  }
+
+  .tdesc span .line2 {
+    color: var(--global-text-color);
+    margin-top: 0px;
+  }
+
+  .tdesc span .line3 {
+    color: var(--global-text-color);
+    margin-top: 0px;
+  }
+
+  .tdesc span .line1 a {
+    color: var(--global-text-color)f; 
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .tdesc span .line1 a:hover {
+    text-decoration: underline; 
+  }
+
+  .tdesc span:before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-color: var(--global-bg-color);
+    border-radius: 25px;
+    border: 4px solid var(--global-theme-color);
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 200ms ease-in;
+    z-index: 3;
+  }
+
+  @media screen and (max-width: 600px) {
+    .timeline {
+      display: flex;
+      overflow-x: auto;
+      position: relative;
+      padding-top: 20px;
+    }
+    
+    .timeline li {
+      width: auto;
+      margin-bottom: 150px;
+      padding: 0 20px;
+      font-size: 0.9em;
+    }
+
+    .tstamp {
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      font-weight: 100;
+      white-space: nowrap;
+      z-index: 2;
+    }
+
+    .tdesc {
+      padding-top: 30px;
+      padding: 0 20px;
+      font-size: 0.9em;
+    }
+  }
+</style>
+
 
 <!-- about.html -->
       <div class="post">
         <header class="post-header">
-          <h1 class="post-title" style="font-family: 'Gloria Hallelujah', cursive; margin-bottom: 20px;">
+
+          <!-- Title -->
+          <h1 class="post-title" style="font-family: 'Comic Sans MS', 'Gloria Hallelujah', cursive; margin-bottom: 20px;">
             {% if site.title == "blank" -%}
               <span class="font-weight-bold slide-in">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}
             {%- else -%}
               {{ site.title }}
             {%- endif %}
           </h1>
-          <p class="desc" style="font-family: 'Gloria Hallelujah', cursive;">{{ page.subtitle }}</p>
+
+          <!-- Subtitle -->
+          <p class="desc" style="font-family: 'Comic Sans MS', 'Gloria Hallelujah', cursive;">
+            {{ page.subtitle }}
+            <!-- <img src="assets/img/Old_Well_mark.png" alt="Old Well Mark" 
+            style="height: calc(2.0em); vertical-align: middle; margin-left: 5px;"> -->
+          </p>
+
         <article>
           {% if page.profile -%}
           <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
@@ -154,6 +295,127 @@ details {
           <div class="clearfix">
             {{ content }}
           </div>
+
+          <!-- <div style="font-size: 1.5rem; line-height: 1.8; font-weight: 300;">
+            <i class="fas fa-quote-left"></i>
+            <span style="font-family: 'Gloria Hallelujah', cursive;">Somewhere, something incredible is waiting to be known.</span>
+            <i class="fas fa-quote-right"></i><br/>
+            —&nbsp;Carl&nbsp;Sagan
+          </div> -->
+
+          <div class="clearfix">
+          <ol class="timeline">
+              <li>
+              <div class="tstamp">
+                  <span>Sept. 2018 - June 2022</span>
+              </div>
+              <div class="tdesc">
+                <span>
+                <span class="line1"><a href="https://www.ncu.edu.tw/en/index.html">National Central University</a></span> 
+                <span class="line2">B.Sc. in Physics</span>
+                <!-- <span class="line3">Advisor: Shih-Hung Chen</span> -->
+                </span>
+              </div>
+              </li>
+
+              <li>
+              <div class="tstamp">
+                  <span>Sept. 2022 - June 2024</span>
+              </div>
+              <div class="tdesc">
+                <span>
+                <span class="line1"><a href="https://www.ntu.edu.tw/english/">National Taiwan University</a></span> 
+                <span class="line2">M.Sc. in Physics</span>
+                <!-- <span class="line3">Advisor: Hsi-Sheng Goan</span> -->
+                </span>
+              </div>
+              </li>
+
+              <li>
+              <div class="tstamp">
+                  <span>July 2024 - Feb. 2025</span>
+              </div>
+              <div class="tdesc">
+                <span>
+                <span class="line1"><a href="https://phys.ncts.ntu.edu.tw/">NCTS-Physics</a></span> 
+                <span class="line2">Research Assistant</spaan>
+                <!-- <span class="line3">Host: Hsi-Sheng Goan</span> -->
+                </span>
+              </div>
+              </li>
+
+              <li>
+              <div class="tstamp">
+                  <span>Aug. 2025</span>
+              </div>
+              <div class="tdesc">
+              <span>
+              <span class="line1"><a href="https://cs.unc.edu/">UNC Chapel Hill</a></span> 
+              <span class="line2">Incoming Ph.D. Student</span>
+              <!-- <span class="line3">Advisor: xxx</span> -->
+              </span>
+              </div>
+              </li>
+          </ol>
+          </div>
+
+
+          <!-- <details open>
+            <summary>
+              <h2 style="display: inline; cursor: pointer;">
+                Physics Demo - Two Stream Instability
+              </h2>
+              <span>
+                <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation">
+                  <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                </svg>
+                <svg class="control-icon control-icon-close" width="24" height="24" role="presentation" style="display:none;">
+                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                </svg>
+              </span>
+            </summary>
+
+          <div class="main-container">
+            <div class="canvas-container">
+                <canvas id="myCanvas" width="600" height="450"></canvas>
+            </div>
+            <div class="controls-container">
+                <h5>Beam Width <span id="bw"></span> ( \(1 / V_b \) ) </h5>
+                <div class="slider-button-container">
+                    <input type="range" min="0.0" max="0.3" value="0.1" step="0.01" class="slider w3-slider" id="myRange">
+                    <button class="stylish-button" id="start">Run</button>
+                </div>
+                <p>
+                The phenomenon of the two-stream instability occurs 
+                where plasma flows are moving in opposite directions. 
+                This instability arises from the transfer of energy 
+                between particles in the plasma and EM wave, 
+                leading to the exponential growth of certain wave modes, 
+                described by the dispersion relation:
+                \[ 1 = \dfrac{\omega_p^2/2}{(\omega+\omega_D)^2} + \dfrac{\omega_p^2/2}{(\omega-\omega_D)^2}. \]
+                (See <a href="{{ '/projects/twostream/' | relative_url }}">blog post</a> for more detail :smile:)
+                </p>
+            </div>
+          </div>
+          </details> -->
+
+          <!-- News -->
+          {% if page.news and site.announcements.enabled -%}
+            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
+            {%- include news.html limit=true %}
+          {%- endif %}
+
+          <!-- Latest posts -->
+          {% if page.latest_posts -%}
+            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
+            {%- include latest_posts.html %}
+          {%- endif %}
+
+          <!-- Selected papers -->
+          {% if page.selected_papers -%}
+            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Selected Publications</a></h2>
+            {%- include selected_papers.html %}
+          {%- endif %}
 
           <details open>
             <summary>
@@ -196,65 +458,8 @@ details {
           </div>
           </details>
 
-          <details open>
-            <summary>
-              <h2 style="display: inline; cursor: pointer;">
-                Physics Demo - Two Stream Instability
-              </h2>
-              <span>
-                <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation">
-                  <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
-                </svg>
-                <svg class="control-icon control-icon-close" width="24" height="24" role="presentation" style="display:none;">
-                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-                </svg>
-              </span>
-            </summary>
-
-          <div class="main-container">
-            <div class="canvas-container">
-                <canvas id="myCanvas" width="600" height="450"></canvas>
-            </div>
-            <div class="controls-container">
-                <h5>Beam Width <span id="bw"></span> ( \(1 / V_b \) ) </h5>
-                <div class="slider-button-container">
-                    <input type="range" min="0.0" max="0.3" value="0.1" step="0.01" class="slider w3-slider" id="myRange">
-                    <button class="stylish-button" id="start">Run</button>
-                </div>
-                <p>
-                The phenomenon of the two-stream instability occurs 
-                where plasma flows are moving in opposite directions. 
-                This instability arises from the transfer of energy 
-                between particles in the plasma and EM wave, 
-                leading to the exponential growth of certain wave modes, 
-                described by the dispersion relation:
-                \[ 1 = \dfrac{\omega_p^2/2}{(\omega+\omega_D)^2} + \dfrac{\omega_p^2/2}{(\omega-\omega_D)^2}. \]
-                (See <a href="{{ '/projects/twostream/' | relative_url }}">blog post</a> for more detail :smile:)
-                </p>
-            </div>
-          </div>
-          </details>
-
-          <!-- News -->
-          {% if page.news and site.announcements.enabled -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
-            {%- include news.html limit=true %}
-          {%- endif %}
-
-          <!-- Latest posts -->
-          {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
-            {%- include latest_posts.html %}
-          {%- endif %}
-
-          <!-- Selected papers -->
-          {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Selected Publications</a></h2>
-            {%- include selected_papers.html %}
-          {%- endif %}
-
           <!-- Social -->
-          {%- if page.social %}
+          <!-- {%- if page.social %}
             <div class="social">
               <div class="contact-icons">
                 {% include social.html %}
@@ -264,7 +469,7 @@ details {
                 {{ site.contact_note }}
               </div>
 
-            </div>
+            </div> -->
           {%- endif %}
 
         </article>
@@ -319,6 +524,21 @@ details {
 </script>
 
 <script>
+  function hexToRGB(hex) {
+      // Remove the '#' character if it exists
+      hex = hex.replace('#', '');
+
+      // Extract the red, green, and blue components (2 characters each)
+      const r = parseInt(hex.slice(0, 2), 16);
+      const g = parseInt(hex.slice(2, 4), 16);
+      const b = parseInt(hex.slice(4, 6), 16);
+
+      // Return the RGB values as an object or array
+      return { r, g, b }; // or return [r, g, b];
+  }
+</script>
+
+<!-- <script>
   let start = document.querySelector("#start");
   start.addEventListener("click", Restart, false);
   
@@ -515,10 +735,10 @@ details {
           ctx.beginPath();
           ctx.arc(r[i] / L * maxX, (v[i] + 3) / 6 * maxY, radius, 0, Math.PI*2);
           if (i < NP / 2){
-            ctx.fillStyle = 'rgb(0, 164, 204)';
+            ctx.fillStyle = 'rgb(0, 165, 173)';
           }
           else{
-            ctx.fillStyle = 'rgb(249, 87, 0)';
+            ctx.fillStyle = 'rgb(239, 68, 111)';
           }
           ctx.fill();
           ctx.closePath();        
@@ -551,11 +771,16 @@ details {
   
   // Restart()
   
-</script>
+</script> -->
 
 
 <script>
 const size = 50;
+const root = document.documentElement;
+const computedStyle = getComputedStyle(root);
+const themeColor = computedStyle.getPropertyValue('--global-theme-color');
+const rgbValues = hexToRGB(themeColor);
+
 let pattern1 = [
     [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 1, 1, 1, 1, -1, -1, -1, -1],
     [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 1, 1, 1, -1, 1, -1, -1, -1, -1],
@@ -787,7 +1012,9 @@ function drawPattern(ctx2, pattern, dimension) {
     for (let x = 0; x < dimension; x++) {
         for (let y = 0; y < dimension; y++) {
             if (pattern[y][x] === 1) {
-                ctx2.fillStyle = 'rgba(142 ,166 ,222, 0.8)'; 
+                // ctx2.fillStyle = 'rgba(142 ,166 ,222, 0.8)'; 
+                ctx2.fillStyle = 'rgba(75, 156, 211, 0.8)'; 
+                // ctx2.fillStyle = `rgba(${rgbValues.r}, ${rgbValues.g}, ${rgbValues.b}, 0.8)`;
             } else {
                 ctx2.fillStyle = 'rgba(255, 255, 255, 0)';
             }
@@ -814,3 +1041,12 @@ document.getElementById('retrive').addEventListener('click', () => {
     visualizeRetrieval(currentPattern, weightMatrix, 3000); 
 });
 </script>
+
+<script>
+  function hexToRGB(hex) {
+      const r = parseInt(hex.slice(1, 2), 16);
+      const g = parseInt(hex.slice(3, 4), 16);
+      const b = parseInt(hex.slice(5, 6), 16);
+      return [r, g, b];
+  }
+  </script>
