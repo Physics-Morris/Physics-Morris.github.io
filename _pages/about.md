@@ -14,8 +14,8 @@ profile:
   more_info: >
     <p>
         <i class="fas fa-envelope"></i>
-        <a href="mailto:morrisatntu@gmail.com" style="text-decoration: none;">
-        morrisatntu<span style="color: inherit;"> [at] </span> gmail [dot] com
+        <a href="mailto:morris@cs.unc.edu" style="text-decoration: none;">
+        morris<span style="color: inherit;"> [at] </span> cs [dot] unc [dot] edu
         </a>
     </p>
 
@@ -38,7 +38,7 @@ My research interests lie in following directions:
 3. Tackling **interdisciplinary scientific problems** from the machine learning perspective --- physics-based modeling, quantum computing. **[[ArXiv](https://arxiv.org/abs/2407.14761), [ArXiv](https://arxiv.org/abs/2411.06828)]**
 4. Advancing domain adaptation and scientific discovery frameworks for **Large Language Models**. **[[EMNLP'24](https://aclanthology.org/2024.findings-emnlp.969/)]**
 
-Feel free to **reach out** if you think we should **[connect](mailto:morrisatntu@gmail.com)** !
+Feel free to **reach out** if you think we should **[connect](mailto:morris@cs.unc.edu)** !
 
 > <i class="fas fa-quote-left"></i>
 > <span style="font-family: 'Gloria Hallelujah', cursive;">Somewhere, something incredible is waiting to be known.</span>
