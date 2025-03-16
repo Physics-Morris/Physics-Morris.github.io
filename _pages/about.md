@@ -14,8 +14,9 @@ profile:
   more_info: >
     <p>
         <i class="fas fa-envelope"></i>
+        My Email:
         <a href="mailto:morris@cs.unc.edu" style="text-decoration: none;">
-        morris<span style="color: inherit;"> [at] </span> cs [dot] unc [dot] edu
+        morris@cs.unc.edu
         </a>
     </p>
 
