@@ -19,9 +19,12 @@ profile:
         morris@cs.unc.edu
         </a>
     </p>
-
-# <i class="fas fa-envelope"></i> Email: <br> 
-# yuchaohuang<span style="color: inherit;"> [at] </span>g.ntu.edu.tw
+    <p>
+        <i class="fas fa-graduation-cap"></i>
+        <a href="https://scholar.google.com/citations?user=YOUR_ID" style="text-decoration: none;">
+        [Google Scholar]
+        </a>
+    </p>
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
