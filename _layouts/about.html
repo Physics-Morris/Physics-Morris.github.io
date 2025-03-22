@@ -215,30 +215,47 @@ details {
       display: flex;
       overflow-x: auto;
       position: relative;
-      padding-top: 20px;
+      padding-top: 90px;
+      min-width: 100px;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+    
+    .timeline:before {
+      top: 10px;
     }
     
     .timeline li {
       width: auto;
       margin-bottom: 150px;
-      padding: 0 20px;
+      padding: 0;
       font-size: 0.9em;
+      flex: 1;
+      margin-left: 0;
+      margin-right: 0;
     }
-
+    
     .tstamp {
       position: absolute;
       top: 5%;
       left: 50%;
-      transform: translate(-50%, -100%);
+      transform: translate(-50%, -200%) rotate(-45deg); 
       font-weight: 100;
       white-space: nowrap;
       z-index: 2;
+      font-size: 0.75em;
     }
-
+    
     .tdesc {
       padding-top: 30px;
-      padding: 0 20px;
-      font-size: 0.9em;
+      padding: 0 10px;
+      font-size: 0.85em;
+    }
+    
+    .tdesc span {
+      max-width: 100px; 
+      overflow-wrap: break-word;
     }
   }
 </style>
