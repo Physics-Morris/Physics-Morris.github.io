@@ -21,7 +21,7 @@ profile:
     </p>
     <p>
         <i class="fas fa-graduation-cap"></i>
-        <a href="https://scholar.google.com/citations?user=VLK6C1u3Kvh1u3Kvh8" style="text-decoration: none;">
+        <a href="https://scholar.google.com/citations?user=1u3Kvh8AAAAJ" style="text-decoration: none;">
         [Google Scholar]
         </a>
     </p>
