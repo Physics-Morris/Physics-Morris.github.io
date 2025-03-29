@@ -4,16 +4,16 @@
 # bundle exec jekyll serve --lsi
 # -----------------------------------------------------------------------------
 
-title: "Morris Huang" # the website title (if blank, full name will be used instead)
-first_name: Morris
-# middle_name: R.
+title: "Yu-Chao (Morris) Huang" # the website title (if blank, full name will be used instead)
+first_name: Yu-Chao
+middle_name: (Morris)
 last_name: Huang
-email: yuchaohuang@g.ntu.edu.tw
+email: morris@cs.unc.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Morris Huang personal website.
+  Yu-Chao (Morris) Huang personal website.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-keywords: Morris-Huang, academic-website, portfolio-website  # add your own keywords or leave empty
+keywords: Yu-Chao-Huang, Morris-Huang, academic-website, portfolio-website  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: head_round.png  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
