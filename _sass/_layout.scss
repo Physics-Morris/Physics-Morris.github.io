@@ -80,7 +80,7 @@ body.sticky-bottom-footer {
 
 /* Give icons a fixed width to ensure alignment */
 .more-info p i {
-  width: 1.5rem;
+  width: 1.0rem;
   text-align: center;
   margin-right: 0.5rem; 
   flex-shrink: 0;
@@ -88,6 +88,6 @@ body.sticky-bottom-footer {
 
 @media (max-width: 768px) {
   .more-info {
-    max-width: 70%;
+    max-width: 80%;
   }
 }

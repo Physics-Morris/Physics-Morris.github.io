@@ -15,11 +15,17 @@ profile:
     <p>
         <i class="fas fa-envelope icon" style="color: #515151"></i>
         <a href="mailto:morris@cs.unc.edu" style="text-decoration: none;">
-        morris (at) cs.unc.edu
-        </a>
+            morris (at) cs.unc.edu
+        </a> 
     </p>
     <p> <i class="fas fa-graduation-cap" style="color: #515151"></i>
         <a href="https://scholar.google.com/citations?user=1u3Kvh8AAAAJ" style="text-decoration: none;">Google Scholar</a>
+    </p>
+    <p>
+        <i class="fab fa-twitter" style="color: #515151"></i>
+        <a href="https://twitter.com/the_yuchao" style="text-decoration: none;">
+            @the_yuchao
+        </a>
     </p>
 
 news: false  # includes a list of news items
