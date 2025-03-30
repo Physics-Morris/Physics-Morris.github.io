@@ -51,3 +51,43 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+.profile {
+  display: block;
+  text-align: center;
+  width: 100%; 
+}
+
+/* More-info box centered inside the parent */
+.more-info {
+  padding: 0.75rem 1rem;
+  background-color: #f4f4f4;
+  border-radius: 0.5rem;
+  max-width: 80%;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: block; 
+  margin: 0.5rem auto;
+}
+
+.more-info p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+/* Give icons a fixed width to ensure alignment */
+.more-info p i {
+  width: 1.5rem;
+  text-align: center;
+  margin-right: 0.5rem; 
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .more-info {
+    max-width: 70%;
+  }
+}
