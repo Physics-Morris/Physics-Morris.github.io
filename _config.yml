@@ -5,9 +5,9 @@
 # -----------------------------------------------------------------------------
 
 title: "Yu-Chao (Morris) Huang" # the website title (if blank, full name will be used instead)
-first_name: Yu-Chao
-middle_name: (Morris)
-last_name: Huang
+first_name:
+middle_name:
+last_name: 
 email: morris@cs.unc.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Yu-Chao (Morris) Huang personal website.
