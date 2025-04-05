@@ -424,6 +424,8 @@ details {
           <!-- Selected papers -->
           {% if page.selected_papers -%}
             <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Selected Publications</a></h2>
+            <p class="post-description">* These authors contributed equally to this work.</p>
+            <hr>
             {%- include selected_papers.html %}
           {%- endif %}
 
