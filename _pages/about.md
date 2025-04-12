@@ -13,13 +13,13 @@ profile:
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>
-        <i class="fas fa-envelope icon" style="color: #515151"></i>
+        <i class="fas fa-envelope" style="color: #515151"></i>
         <a href="mailto:morris@cs.unc.edu" style="text-decoration: none;">
             morris (at) cs.unc.edu
         </a> 
     </p>
     <p> 
-        <i class="fas fa-graduation-cap" style="color: #515151"></i>
+        <i class="ai ai-google-scholar" style="color: #515151; font-size: 1.3em;"></i>
         <a href="https://scholar.google.com/citations?user=1u3Kvh8AAAAJ" style="text-decoration: none;">Google Scholar</a>
     </p>
     <p> 
