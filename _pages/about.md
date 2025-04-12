@@ -18,18 +18,19 @@ profile:
             morris (at) cs.unc.edu
         </a> 
     </p>
-    <p> <i class="fas fa-graduation-cap" style="color: #515151"></i>
+    <p> 
+        <i class="fas fa-graduation-cap" style="color: #515151"></i>
         <a href="https://scholar.google.com/citations?user=1u3Kvh8AAAAJ" style="text-decoration: none;">Google Scholar</a>
     </p>
-    <p>
-        <i class="fab fa-twitter" style="color: #515151"></i>
+    <p> 
+        <i class="fab fa-x-twitter" style="color: #515151"></i>
         <a href="https://twitter.com/the_yuchao" style="text-decoration: none;">
             @the_yuchao
         </a>
     </p>
     <p>
-    <i class="fab fa-github" style="color: #515151"></i>
-    <a href="https://github.com/Physics-Morris" style="text-decoration: none;">Physics-Morris</a>
+        <i class="fab fa-github" style="color: #515151"></i>
+        <a href="https://github.com/Physics-Morris" style="text-decoration: none;">Physics-Morris</a>
     </p>
 
 news: false  # includes a list of news items
