@@ -249,7 +249,11 @@
             <div class="contact-info">
               <div class="contact-item">
                 <i class="fas fa-map-marker-alt"></i>
-                <p>{{ site.address | default: "University of North Carolina at Chapel Hill" }}</p>
+                <p>
+                  <a href="https://maps.google.com/?q=University+of+North+Carolina+at+Chapel+Hill" target="_blank" rel="noopener">
+                    {{ site.address | default: "University of North Carolina at Chapel Hill" }}
+                  </a>
+                </p>
               </div>
               <div class="contact-item">
                 <i class="fas fa-envelope"></i>
