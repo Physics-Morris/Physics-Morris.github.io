@@ -10,7 +10,6 @@
       float: left;
     }
   }
-
   ul {
     margin: 0;
     padding: 0;
@@ -80,6 +79,83 @@
     color: white;
     text-transform: capitalize;
   }
+  
+  /* New contact section styles */
+  .contact-info {
+    color: white;
+  }
+  .contact-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .contact-item i {
+    font-size: 16px;
+    margin-right: 10px;
+    color: var(--global-theme-color);
+    width: 25px;
+    text-align: center;
+    padding-top: 3px;
+  }
+  .contact-item p, .contact-item a {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .contact-item a:hover {
+    color: var(--global-theme-color);
+    text-decoration: underline;
+  }
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .contact-item a:hover {
+    color: var(--global-theme-color);
+    text-decoration: none;
+  }
+  .social-links-minimal {
+    margin-top: 20px;
+  }
+  .social-links-minimal p {
+    margin-bottom: 10px;
+  }
+  .social-links-minimal i {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2em;
+    width: 25px;
+    margin-right: 8px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .social-links-minimal a {
+    color: http://127.0.0.1:4000/;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .social-links-minimal a:hover {
+    color: var(--global-theme-color);
+    text-decoration: underline;
+  }
+  .fa-x-twitter {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+  }
+  .fa-x-twitter:before {
+    content: "\f099";  /* Using Twitter icon as fallback */
+  }
+  @supports (-webkit-font-feature-settings: normal) or (font-feature-settings: normal) {
+    .fa-x-twitter:before {
+      content: "𝕏";
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: bold;
+    }
+  }
+  
   .copyright-area {
     padding: 25px 0;
     text-align: center;
@@ -147,7 +223,7 @@
           </div>
         </div>
 
-        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+        <!-- <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
           <div class="footer-widget">
             <div class="footer-widget-heading">
               <h3>Useful Links</h3>
@@ -162,6 +238,35 @@
               <li><a href="https://wandb.ai" target="_blank" rel="noopener">Weights &amp; Biases</a></li>
               <li><a href="https://www.interconnects.ai/" target="_blank" rel="noopener">Interconnects</a></li>
             </ul>
+          </div>
+        </div> -->
+
+        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+          <div class="footer-widget">
+            <div class="footer-widget-heading">
+              <h3>Contact</h3>
+            </div>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>{{ site.address | default: "University of North Carolina at Chapel Hill" }}</p>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div class="contact-details">
+                  <a href="mailto:{{ site.email | default: 'morris@cs.unc.edu' }}">{{ site.email | default: "morris@cs.unc.edu" }}</a>
+                  <a href="mailto:{{ site.secondary_email | default: 'yc.huang@unc.edu' }}">{{ site.secondary_email | default: "yc.huang@unc.edu" }}</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-x-twitter"></i>
+                <div class="contact-details">
+                  <a href="https://x.com/{{ site.x_username | default: site.twitter_username | default: 'the_yuchao' }}" target="_blank" rel="noopener">
+                    @{{ site.x_username | default: site.twitter_username | default: "the_yuchao" }}
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
