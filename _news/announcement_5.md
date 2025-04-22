@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-Starting my PhD study at [University of North Carolina at Chapel Hill](https://www.unc.edu/) this Fall. 🎉 
+Starting my **PhD** study at [University of North Carolina at Chapel Hill](https://www.unc.edu/) this Fall. 🎉 
 I’ve set some [ambitious goals]({{ '/news/phd_goals' | relative_url }})!
