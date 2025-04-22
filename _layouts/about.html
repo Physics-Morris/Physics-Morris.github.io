@@ -316,6 +316,39 @@ details {
           </div>
 
 
+          <div class="terminal-news-box">
+            <div class="terminal-news-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-news-title">~ News</span>
+                <div class="terminal-news-tabs" id="news-filter-tabs">
+                </div>
+            </div>
+            <div class="terminal-news-body">
+                <ul class="terminal-news-list" id="news-list">
+                    {% if site.news != blank %}
+                    {% assign news = site.news | reverse | where_exp: "item", "item.hidden != true" %}
+                        {% for item in news %}
+                            <li class="terminal-news-item" data-year="{{ item.date | date: '%Y' }}">
+                                <span class="terminal-news-prefix">[{{ item.date | date: "%b, %Y" }}] ~ $ </span>
+                                {% if item.inline %}
+                                    <span class="terminal-news-inline-content">{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}</span>
+                                {% else %}
+                                    <a class="terminal-news-link" href="{{ item.url | relative_url }}">{{ item.date | date: "%b, %Y" }} {{ item.title }}</a>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        <li class="terminal-no-results">No news so far...</li>
+                    {% endif %}
+                </ul>
+                <div id="no-news-message" style="display: none; padding-top: 1em; color: #777; font-style: italic;">No news found for this year.</div>
+            </div>
+        </div>
+          
+
+
 <!-- 
           <div class="clearfix">
           <ol class="timeline">
@@ -1063,4 +1096,80 @@ document.getElementById('retrive').addEventListener('click', () => {
       const b = parseInt(hex.slice(5, 6), 16);
       return [r, g, b];
   }
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const newsList = document.getElementById('news-list');
+      const newsItems = newsList.querySelectorAll('.terminal-news-item');
+      const newsFilterTabs = document.getElementById('news-filter-tabs');
+      const noNewsMessage = document.getElementById('no-news-message');
+      const allYears = new Set();
+  
+      // Extract all unique years from the news items
+      newsItems.forEach(item => {
+          allYears.add(item.dataset.year);
+      });
+  
+      // Sort years in descending order (most recent first)
+      const sortedYears = Array.from(allYears).sort((a, b) => b - a);
+  
+      // Function to filter news by year (remains the same)
+      function filterNewsByYear(year) {
+          let found = false;
+          newsItems.forEach(item => {
+              if (year === 'all' || item.dataset.year === year) {
+                  item.style.display = 'flex'; // Ensure items are displayed as flex containers
+                  found = true;
+              } else {
+                  item.style.display = 'none';
+              }
+          });
+  
+          if (year !== 'all' && !found) {
+              noNewsMessage.style.display = 'block';
+          } else {
+              noNewsMessage.style.display = 'none';
+          }
+      }
+  
+      // Function to handle tab clicks (remains the same)
+      function handleTabClick(event) {
+          const clickedTab = event.target;
+          const year = clickedTab.dataset.year;
+  
+          // Remove active class from other tabs
+          newsFilterTabs.querySelectorAll('.terminal-news-tab').forEach(tab => {
+              tab.classList.remove('active');
+          });
+  
+          // Add active class to the clicked tab
+          clickedTab.classList.add('active');
+  
+          // Filter the news based on the clicked year
+          filterNewsByYear(year);
+      }
+  
+      // Create and append tabs (modified here)
+      sortedYears.forEach((year) => {
+          const tab = document.createElement('div');
+          tab.classList.add('terminal-news-tab');
+          tab.textContent = `~/${year}`; // Changed from `/${year}` to `~/${year}`
+          tab.dataset.year = year;
+          tab.addEventListener('click', handleTabClick);
+          newsFilterTabs.appendChild(tab);
+      });
+  
+      // Show the most recent year's news by default (remains the same)
+      if (sortedYears.length > 0) {
+          const mostRecentYear = sortedYears[0];
+          const firstTab = newsFilterTabs.querySelector(`[data-year="${mostRecentYear}"]`);
+          if (firstTab) {
+              firstTab.classList.add('active');
+              filterNewsByYear(mostRecentYear);
+          }
+      } else if (newsItems.length === 0) {
+          noNewsMessage.style.display = 'none';
+      }
+  });
   </script>

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper titled "Two Tales of Persona in LLMs: A Survey of Role-Playing and Personalization" has been accepted for EMNLP'24 Findings.
+Paper accepted to **EMNLP'24 Findings**: [Two Tales of Persona in LLMs: A Survey of Role-Playing and Personalization](https://aclanthology.org/2024.findings-emnlp.969/).

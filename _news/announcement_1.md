@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper titled "BiSHop: Bi-Directional Cellular Learning for Tabular Data with Generalized Sparse Modern Hopfield Model" has been accepted for ICML'24.
+Paper accepted to **ICML'24**: [BiSHop: Bi-Directional Cellular Learning for Tabular Data with Generalized Sparse Modern Hopfield Model](https://arxiv.org/abs/2404.03830).
