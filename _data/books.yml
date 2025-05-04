@@ -1,0 +1,312 @@
+- title: "我是貓 (I Am a Cat)"
+  author: "夏目漱石"
+  rating: 4
+  year: 1905
+  
+- title: "The Perfect Theory: A Century of Geniuses and the Battle over General Relativity"
+  author: "Pedro G. Ferreira"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780547554891-L.jpg"
+  year: 2014
+  
+- title: "The Mindful Body"
+  author: "Ellen J. Langer"
+  rating: 4
+  year: 2023
+  
+- title: "The Selfish Gene"
+  author: "Richard Dawkins"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780199291151-L.jpg"
+  year: 1976
+  
+- title: "Outlives"
+  author: "Peter Attia"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780593236598-L.jpg"
+  year: 2023
+- title: "A Farewell to Arms"
+  author: "Ernest Hemingway"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780099910107-L.jpg"
+  year: 1929
+- title: "The Ballad of the Sad Café (傷心咖啡館之歌)"
+  author: "Carson McCullers"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9781435292499-L.jpg"
+  year: 1951
+- title: "山茶花文具店 (ツバキ文具店)"
+  author: "Ito Ogawa"
+  rating: 5
+  year: 2016
+- title: "The Picture of Dorian Gray"
+  author: "Oscar Wilde"
+  rating: 5
+  cover_url: "https://covers.openlibrary.org/b/isbn/9789354402173-L.jpg"
+  year: 2016
+- title: "The Great Gatsby"
+  author: "F. Scott Fitzgerald"
+  rating: 5
+  cover_url: "https://covers.openlibrary.org/b/isbn/9787540766214-L.jpg"
+  year: 2016
+
+- title: "Harry Potter and the Chamber of Secrets"
+  author: "J.K. Rowling"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780439064873-L.jpg"
+  year: 1998
+  
+- title: "俠客行"
+  author: "金庸"
+  rating: 4
+  year: 1965
+  
+- title: "鹿鼎記"
+  author: "金庸"
+  rating: 4
+  year: 1972
+  
+- title: "天龍八部"
+  author: "金庸"
+  rating: 4
+  year: 1963
+  
+- title: "笑傲江湖"
+  author: "金庸"
+  rating: 4
+  year: 1969
+  
+- title: "倚天屠龍記"
+  author: "金庸"
+  rating: 4
+  year: 1961
+  
+- title: "神雕侠侣"
+  author: "金庸"
+  rating: 4
+  year: 1959
+  
+- title: "射鵰英雄傳"
+  author: "金庸"
+  rating: 4
+  year: 1957
+  
+- title: "War and Peace"
+  author: "Leo Tolstoy"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780143039990-L.jpg"
+  year: 1869
+  
+- title: "The Midnight Library"
+  author: "Matt Haig"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780525559474-L.jpg"
+  year: 2020
+  
+- title: "One Hundred Years of Solitude"
+  author: "Gabriel García Márquez"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780060883287-L.jpg"
+  year: 1967
+  
+- title: "Why We Sleep: Unlocking the Power of Sleep and Dreams"
+  author: "Matthew Walker"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9781508240013-L.jpg"
+  year: 2017
+  
+- title: "Homo Deus: A History of Tomorrow"
+  author: "Yuval Noah Harari"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780062464316-L.jpg"
+  year: 2016
+  
+- title: "The Fault in Our Stars"
+  author: "John Green"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780525478812-L.jpg"
+  year: 2012
+  
+- title: "Sapiens: A Brief History of Humankind"
+  author: "Yuval Noah Harari"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780771038518-L.jpg"
+  year: 2014
+  
+- title: "Where the Forest Meets the Stars"
+  author: "Glendy Vanderah"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9781542040068-L.jpg"
+  year: 2019
+  
+- title: "The Lion, the Witch and the Wardrobe"
+  author: "C.S. Lewis"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780064471046-L.jpg"
+  year: 1950
+  
+- title: "Harry Potter and the Order of the Phoenix"
+  author: "J.K. Rowling"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780439358071-L.jpg"
+  year: 2003
+  
+- title: "Brave New World"
+  author: "Aldous Huxley"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780060850524-L.jpg"
+  year: 1932
+  
+- title: "Harry Potter and the Half-Blood Prince"
+  author: "J.K. Rowling"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780439785969-L.jpg"
+  year: 2005
+  
+- title: "Harry Potter and the Deathly Hallows"
+  author: "J.K. Rowling"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780545139700-L.jpg"
+  year: 2007
+  
+- title: "Harry Potter and the Goblet of Fire"
+  author: "J.K. Rowling"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780439139601-L.jpg"
+  year: 2000
+  
+- title: "Harry Potter and the Prisoner of Azkaban"
+  author: "J.K. Rowling"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780439136365-L.jpg"
+  year: 1999
+  
+- title: "Lord of the Flies"
+  author: "William Golding"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780399501487-L.jpg"
+  year: 1954
+  
+- title: "The Handmaid's Tale"
+  author: "Margaret Atwood"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780385490818-L.jpg"
+  year: 1985
+  
+- title: "The da Vinci Code"
+  author: "Dan Brown"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780307474278-L.jpg"
+  year: 2003
+  
+- title: "Harry Potter and the Sorcerer's Stone"
+  author: "J.K. Rowling"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780590353427-L.jpg"
+  year: 1997
+  
+- title: "The Catcher in the Rye"
+  author: "J.D. Salinger"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780316769488-L.jpg"
+  year: 1951
+  
+- title: "Animal Farm"
+  author: "George Orwell"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780451526342-L.jpg"
+  year: 1945
+  
+- title: "1984"
+  author: "George Orwell"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg"
+  year: 1949
+  
+- title: "A Good Man is Hard To Find and Other Stories"
+  author: "Flannery O'Connor"
+  rating: 4
+  
+- title: "The Testaments"
+  author: "Margaret Atwood"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780385543781-L.jpg"
+  year: 2019
+  
+- title: "A Gentleman in Moscow"
+  author: "Amor Towles"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780670026197-L.jpg"
+  year: 2016
+  
+- title: "News of the World"
+  author: "Paulette Jiles"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780062409218-L.jpg"
+  year: 2016
+  
+- title: "Everything Happens for a Reason"
+  author: "Kate Bowler"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780399592065-L.jpg"
+  year: 2018
+  
+- title: "Where the Crawdads Sing"
+  author: "Delia Owens"
+  rating: 4
+  year: 2018
+  
+- title: "Atomic Habits"
+  author: "James Clear"
+  rating: 4
+  year: 2018
+  
+- title: "真確"
+  author: "Hans Rosling"
+  rating: 4
+  year: 2018
+  
+- title: "The Heart Is a Lonely Hunter"
+  author: "Carson McCullers"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780618526413-L.jpg"
+  year: 1940
+  
+- title: "To the Lighthouse"
+  author: "Virginia Woolf"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780156907392-L.jpg"
+  year: 1927
+  
+- title: "安靜, 就是力量"
+  author: "Susan Cain"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780307352149-L.jpg"
+  year: 2012
+  
+- title: "White Rose, Black Forest"
+  author: "Eoin Dempsey"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9781503954052-L.jpg"
+  year: 2018
+  
+- title: "To Kill a Mockingbird"
+  author: "Harper Lee"
+  rating: 4
+  cover_url: "https://covers.openlibrary.org/b/isbn/9780061120084-L.jpg"
+  year: 1960
+  
+- title: "被討厭的勇氣 二部曲完結篇"
+  author: "岸見一郎"
+  rating: 4
+  year: 2014
+  
+- title: "被討厭的勇氣"
+  author: "岸見一郎"
+  rating: 4
+  year: 2013
+  
+- title: "克拉拉與太陽"
+  author: "Kazuo Ishiguro"
+  rating: 4
+  year: 2021

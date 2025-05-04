@@ -13,4 +13,6 @@ children:
       permalink: /piano/
     - title: Physics Demo
       permalink: /physics/
+    - title: Books
+      permalink: /books/
 ---
