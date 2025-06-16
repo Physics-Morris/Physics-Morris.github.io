@@ -5,6 +5,7 @@ permalink: /coauthor/
 nav: false
 nav_order: 7
 compress_html: false
+image: /assets/img/coauthor-preview.png
 ---
 
 # Co-author Analyzer
