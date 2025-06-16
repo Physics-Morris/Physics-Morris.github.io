@@ -4,6 +4,7 @@ title: Co-author Analyzer
 permalink: /coauthor/
 nav: false
 nav_order: 7
+compress_html: false
 ---
 
 # Co-author Analyzer
