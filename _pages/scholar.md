@@ -4,8 +4,8 @@ title: Co-author Analyzer
 permalink: /coauthor/
 nav: false
 nav_order: 7
+thumbnail: /assets/img/coauthor-preview.png
 compress_html: false
-image: /assets/img/coauthor-preview.png
 ---
 
 # Co-author Analyzer
