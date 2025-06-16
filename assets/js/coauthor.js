@@ -33,7 +33,7 @@ async function analyze(preloadId = null) {
       if (data.results) {
         data.results.forEach(work => {
           work.authorships.forEach(author => {
-            const id = author.author.id?.split("/").pop();
+            const id = author.author.id ? author.author.id.split("/").pop() : null;
             const name = author.author.display_name;
             if (id && name && name !== targetAuthorName) {
               if (!results[name]) results[name] = { ids: new Set(), count: 0 };
