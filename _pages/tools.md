@@ -7,4 +7,6 @@ dropdown: true
 children:
     - title: Co-author Analyzer
       permalink: /coauthor/
+    - title: Citation Analyzer
+      permalink: /citation/
 ---
