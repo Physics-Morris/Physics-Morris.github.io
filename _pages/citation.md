@@ -115,7 +115,7 @@ compress_html: false
 
 </style>
 
-Building on the previous [simple tool]({{ ‘/coauthor/’ | relative_url }}) for analyzing co-authors, this tool lists the researchers who have cited the author’s work.
+Building on the previous <a href="{{ '/coauthor/' | relative_url }}" target="_blank" rel="noopener noreferrer">tool</a> for analyzing co-authors, this tool lists the researchers who have cited the author’s work.
 
 <div class="card-custom">
   <div class="input-group">
