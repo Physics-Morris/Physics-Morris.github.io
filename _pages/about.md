@@ -42,16 +42,11 @@ Hey, my name is **Yu-Chao Huang (<span style="font-family: 'LXGW WenKai TC', ser
 Previously, I had the opportunity to intern at <a href='https://www.mccormick.northwestern.edu/computer-science/'>NU</a>, working under <a href='https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/liu-han.html'>Prof. Han Liu</a> in the <a href='https://magics.cs.northwestern.edu/'>MAGICS</a> lab.
 Before that, I earned M.Sc. in Physics under the guidance of <a href='https://www.phys.ntu.edu.tw/enphysics/goan.html'>Prof. Hsi-Sheng Goan</a> at <a href='https://www.ntu.edu.tw/english/'>National Taiwan University</a> followed by research assistant position at <a href='https://phys.ncts.ntu.edu.tw'>National Center for Theoretical Sciences</a>.
 
-The equation <span style="color:#00B3CC">\\(|\\)Morris\\(\\rangle\\)</span> = <span style="color:#4CAF50">\\( {\\alpha} |\\)AI\\(\\rangle\\)</span> + <span style="color:#FF80AB">\\( {\\beta} |\\)Science\\(\\rangle\\)</span> reflects my **superposition of research passion** at the intersection of AI and science. 
-My research interests lie in following directions: 
-1. **Developing methodologies** with theoretical guarantees to ensure both optimality and practical applicability. **[[ICML'24](https://arxiv.org/abs/2404.03830), [ArXiv](https://arxiv.org/abs/2407.14761), [ArXiv](https://arxiv.org/abs/2411.06828)]**
-2. **Theoretical understanding** of the computational and statistical properties of deep learning models. **[[ICLR'25](https://arxiv.org/abs/2411.17522)]**
-3. Tackling **interdisciplinary scientific problems** from the machine learning perspective --- physics-based modeling, quantum computing. **[[ArXiv](https://arxiv.org/abs/2407.14761), [ArXiv](https://arxiv.org/abs/2411.06828)]**
-4. Advancing domain adaptation and scientific discovery frameworks for **Large Language Models**. **[[EMNLP'24](https://aclanthology.org/2024.findings-emnlp.969/)]**
+I push the frontier of AI through a scientific lens (**[Details]({{ '/research/' | relative_url }})**).
 
 Feel free to **reach out** if you think we should **[connect](mailto:morris@cs.unc.edu)** !
 
+The closing lines of one of my recent favorite [books](https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus) by Albert&nbsp;Camus:
 > <i class="fas fa-quote-left"></i>
-> <span style="font-family: 'Gloria Hallelujah', cursive;">Somewhere, something incredible is waiting to be known.</span>
+> <span style="font-family: 'Gloria Hallelujah', cursive;">The struggle itself toward the heights is enough to fill a man’s heart. One must imagine Sisyphus happy.</span>
 > <i class="fas fa-quote-right"></i><br />
-> —&nbsp;Carl&nbsp;Sagan
