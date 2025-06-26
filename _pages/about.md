@@ -28,10 +28,6 @@ profile:
             @the_yuchao
         </a>
     </p>
-    <p>
-        <i class="fab fa-github" style="color: #515151"></i>
-        <a href="https://github.com/Physics-Morris" style="text-decoration: none;">Physics-Morris</a>
-    </p>
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
