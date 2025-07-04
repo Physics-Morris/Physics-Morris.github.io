@@ -10,7 +10,7 @@ subtitle: Incoming PhD Student @ <a href='https://cs.unc.edu/'>University of Nor
 profile:
   align: right
   image: morris_head.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   more_info: >
     <p>
         <i class="fas fa-envelope" style="color: #515151"></i>
@@ -43,7 +43,7 @@ I push the frontier of AI through a scientific lens (**[Details]({{ '/research/'
 
 Feel free to **reach out** if you think we should **[connect](mailto:morris@cs.unc.edu)** !
 
-The closing lines of one of my recent favorite [books](https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus) by Albert&nbsp;Camus:
+<!-- The closing lines of one of my recent favorite [books](https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus) by Albert&nbsp;Camus:
 > <i class="fas fa-quote-left"></i>
 > <span style="font-family: 'Gloria Hallelujah', cursive;">The struggle itself toward the heights is enough to fill a man’s heart. One must imagine Sisyphus happy.</span>
-> <i class="fas fa-quote-right"></i><br />
+> <i class="fas fa-quote-right"></i><br /> -->
