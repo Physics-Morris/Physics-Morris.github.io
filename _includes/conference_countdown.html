@@ -1,0 +1,125 @@
+<div id="conference-countdown" class="countdown-container"></div>
+
+<script>
+(function () {
+  /**
+   * List of upcoming conferences. Update the dates (ISO-8601) as needed.
+   * Time is interpreted in the browser’s locale; include a time portion if you
+   * need more accuracy (e.g. "2025-12-08T09:00:00-05:00").
+   */
+  const conferences = [
+    // ICLR 2026 deadlines
+    { conf: "ICLR", name: "Abstract Submission",  date: "2025-09-19T23:59:00-12:00" },
+    { conf: "ICLR", name: "Paper Submission",     date: "2025-09-24T23:59:00-12:00" },
+    { conf: "ICLR", name: "Reviews Released",     date: "2025-11-11T21:00:00Z" },
+    { conf: "ICLR", name: "Discussion Ends",      date: "2025-12-03T21:00:00Z" },
+    { conf: "ICLR", name: "Decision Notification", date: "2026-01-22T21:00:00Z" },
+  ];
+
+  const MS_IN_SECOND = 1000;
+  const MS_IN_MINUTE = MS_IN_SECOND * 60;
+  const MS_IN_HOUR   = MS_IN_MINUTE * 60;
+  const MS_IN_DAY    = MS_IN_HOUR * 24;
+
+  const container = document.getElementById("conference-countdown");
+  if (!container) return;
+
+  /**
+   * Compute formatted remaining time for a given timestamp.
+   */
+  function timeLeft(target) {
+    const diff = new Date(target).getTime() - Date.now();
+    if (diff <= 0) return null;
+    const days    = Math.floor(diff / MS_IN_DAY);
+    const hours   = Math.floor((diff % MS_IN_DAY) / MS_IN_HOUR);
+    const minutes = Math.floor((diff % MS_IN_HOUR) / MS_IN_MINUTE);
+    const seconds = Math.floor((diff % MS_IN_MINUTE) / MS_IN_SECOND);
+    return { days, hours, minutes, seconds };
+  }
+
+  function render() {
+    // Group by conference
+    const grouped = conferences.reduce((acc, item) => {
+      const key = item.conf || "Other";
+      (acc[key] = acc[key] || []).push(item);
+      return acc;
+    }, {});
+
+    container.innerHTML = Object.entries(grouped)
+      .map(([conf, items]) => {
+        const cards = items
+          .map(({ name, date }) => {
+            const left = timeLeft(date);
+            if (!left) return "";
+            const { days, hours, minutes, seconds } = left;
+            return `
+              <div class="countdown-item">
+                <div class="countdown-title">${name}</div>
+                <div class="countdown-value">${days}d&nbsp;${hours}h&nbsp;${minutes}m&nbsp;${seconds}s</div>
+              </div>
+            `;
+          })
+          .join("");
+
+        if (!cards) return ""; // skip conf with no upcoming
+
+        return `
+          <section class="conf-section">
+            <h3 class="conf-header">${conf}</h3>
+            <div class="conf-items">${cards}</div>
+          </section>`;
+      })
+      .join("");
+  }
+
+  // Initial render and start ticker.
+  render();
+  setInterval(render, 1000);
+})();
+</script>
+
+<style>
+#conference-countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.conf-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#conference-countdown .countdown-item {
+  min-width: 160px;
+  background: var(--global-card-bg-color, #f8f9fa);
+  color: var(--global-text-color, #212529);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.conf-header {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#conference-countdown .countdown-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+#conference-countdown .countdown-value {
+  font-size: 1.25rem;
+  color: var(--global-theme-color, #d9534f);
+  font-variant-numeric: tabular-nums;
+}
+</style> 

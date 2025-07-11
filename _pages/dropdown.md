@@ -15,4 +15,6 @@ children:
       permalink: /physics/
     - title: Books
       permalink: /books/
+    - title: Conference Countdown
+      permalink: /conference-countdown/
 ---
