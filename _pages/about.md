@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Incoming PhD Student @ <a href='https://cs.unc.edu/'>University of North Carolina, Chapel Hill</a>
+subtitle: PhD Student @ <a href='https://cs.unc.edu/'>University of North Carolina, Chapel Hill</a>
 # subtitle: Research Assistant @ <a href='https://phys.ncts.ntu.edu.tw'>National Center for Theoretical Sciences</a>
 # subtitle: "<span style='color:#00B3CC'>\\(|\\)Morris\\(\\rangle\\)</span> = <span style='color:#4CAF50'>\\( {\\alpha} |\\)AI\\(\\rangle\\)</span> + <span style='color:#FF80AB'>\\( {\\beta} |\\)Science\\(\\rangle\\)</span>"
 
@@ -35,7 +35,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 <!-- Hey, my name is **Yu-Chao Huang (<span style="font-family: 'LXGW WenKai TC', serif">黃禹超</span> in Chinese)**. I also go by **Morris**.  -->
-I am an incoming PhD student at <a href='https://cs.unc.edu/'>UNC CS</a>, fortunate to be advised by <a href='https://tianlong-chen.github.io/'>Prof. Tianlong Chen</a>. 
+I am a PhD student at <a href='https://cs.unc.edu/'>UNC CS</a>, fortunate to be advised by <a href='https://tianlong-chen.github.io/'>Prof. Tianlong Chen</a>. 
 Previously, I had the opportunity to intern at <a href='https://www.mccormick.northwestern.edu/computer-science/'>NU</a>, working under <a href='https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/liu-han.html'>Prof. Han Liu</a> in the <a href='https://magics.cs.northwestern.edu/'>MAGICS</a> lab.
 Before that, I earned M.Sc. in Physics under the guidance of <a href='https://www.phys.ntu.edu.tw/enphysics/goan.html'>Prof. Hsi-Sheng Goan</a> at <a href='https://www.ntu.edu.tw/english/'>National Taiwan University</a> followed by research assistant position at <a href='https://phys.ncts.ntu.edu.tw'>National Center for Theoretical Sciences</a>.
 
